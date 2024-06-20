@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
         }
     }
     
-    private PlayerControls playerControls;
+    private PlayerInputs playerControls;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
         {
             _instance = this;
         }
-        playerControls = new PlayerControls();
+        playerControls = new PlayerInputs();
     }
 
     private void OnEnable()
@@ -48,5 +48,10 @@ public class InputManager : MonoBehaviour
     public Vector2 GetMouseDelta()
     {
         return playerControls.Player.Look.ReadValue<Vector2>();
+    }
+
+    public bool GetInteracting()
+    {
+        return playerControls.Player.Interact.triggered;
     }
 }
