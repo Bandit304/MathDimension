@@ -755,7 +755,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -66}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 260.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944817175
 MonoBehaviour:
@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 974136319}
   - component: {fileID: 974136318}
   - component: {fileID: 974136317}
+  - component: {fileID: 974136322}
   m_Layer: 6
   m_Name: ColorChangingCube
   m_TagString: Untagged
@@ -888,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d2a993ef7e6e34abc555909a29395e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEvents: 1
   promptMessage: Color Changing Box
 --- !u!65 &974136318
 BoxCollider:
@@ -978,6 +980,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974136322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974136316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3525e0382ae9143b70d50ca587534d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 599894376}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1030740089
 GameObject:
   m_ObjectHideFlags: 0
