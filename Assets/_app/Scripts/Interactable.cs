@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Interactable : MonoBehaviour
+namespace _app.Scripts
 {
-    //Add or remove an InteractionEvent component to this gameObject.
-    public bool useEvents;
-    public string promptMessage;
+    public abstract class Interactable : MonoBehaviour
+    {
+        //Add or remove an InteractionEvent component to this gameObject.
+        public bool useEvents;
+        public string promptMessage;
 
-    public void BaseInteract()
-    {
-        if (useEvents)
+        public void BaseInteract()
         {
-            GetComponent<InteractionEvent>().OnInteract.Invoke();
+            if (useEvents)
+            {
+                GetComponent<InteractionEvent>().OnInteract.Invoke();
+            }
+            Interact();
         }
-        Interact();
-    }
-    protected virtual void Interact()
-    {
+        protected virtual void Interact()
+        {
         
+        }
     }
 }
