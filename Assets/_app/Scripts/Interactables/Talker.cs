@@ -1,8 +1,8 @@
 using System.Collections;
-using Assets._app.Scripts.Managers;
+using _app.Scripts.Managers;
 using UnityEngine;
 
-namespace Assets._app.Scripts.Interactables {
+namespace _app.Scripts.Interactables {
     public class Talker : Interactable {
         [Header("Dialogue Fields")]
         public string speaker;

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Assets._app.Scripts.Managers {
+namespace _app.Scripts.Managers {
     public class DialogueBoxManager : MonoBehaviour {
         [Header("Singleton Reference")]
         public static DialogueBoxManager Instance { get; private set; }
