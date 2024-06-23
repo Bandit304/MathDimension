@@ -1,57 +1,59 @@
-using System;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+namespace _app.Scripts
 {
-    // this is a singleton as we will only need one input manager
-    private static InputManager _instance;
-    public static InputManager Instance
+    public class InputManager : MonoBehaviour
     {
-        get
+        // this is a singleton as we will only need one input manager
+        private static InputManager _instance;
+        public static InputManager Instance
         {
-            return _instance;
+            get
+            {
+                return _instance;
+            }
         }
-    }
     
-    private PlayerInputs playerControls;
+        private PlayerInputs playerControls;
 
-    private void Awake()
-    {
-        // playerControls manages input from the Player Input System
-        if (_instance != null && _instance != this)
+        private void Awake()
         {
-            // this destroys the current instance if another one exists
-            Destroy(this.gameObject);
+            // playerControls manages input from the Player Input System
+            if (_instance != null && _instance != this)
+            {
+                // this destroys the current instance if another one exists
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
+            playerControls = new PlayerInputs();
         }
-        else
+
+        private void OnEnable()
         {
-            _instance = this;
+            playerControls.Enable();
         }
-        playerControls = new PlayerInputs();
-    }
 
-    private void OnEnable()
-    {
-        playerControls.Enable();
-    }
+        private void OnDisable()
+        {
+            playerControls.Disable();
+        }
 
-    private void OnDisable()
-    {
-        playerControls.Disable();
-    }
-
-    public Vector2 GetPlayerMovement()
-    {
-        return playerControls.Player.Movement.ReadValue<Vector2>();
-    }
+        public Vector2 GetPlayerMovement()
+        {
+            return playerControls.Player.Movement.ReadValue<Vector2>();
+        }
     
-    public Vector2 GetMouseDelta()
-    {
-        return playerControls.Player.Look.ReadValue<Vector2>();
-    }
+        public Vector2 GetMouseDelta()
+        {
+            return playerControls.Player.Look.ReadValue<Vector2>();
+        }
 
-    public bool GetInteracting()
-    {
-        return playerControls.Player.Interact.triggered;
+        public bool GetInteracting()
+        {
+            return playerControls.Player.Interact.triggered;
+        }
     }
 }
