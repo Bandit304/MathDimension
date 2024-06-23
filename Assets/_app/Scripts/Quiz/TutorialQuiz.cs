@@ -40,7 +40,7 @@ public class TutorialQuiz : MonoBehaviour
         }
         else
         {
-            whiteboardText.text = num1 + " + " + num2 + " = " + solution + "\nIncorrect";
+            whiteboardText.text = num1 + " + " + num2 + " = ?" + "\nIncorrect";
         }
     }
 
