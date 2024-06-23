@@ -1,3 +1,4 @@
+using _app.Scripts;
 using UnityEditor;
 
 [CustomEditor(typeof(Interactable),true)]
