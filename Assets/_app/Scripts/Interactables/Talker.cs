@@ -17,17 +17,13 @@ namespace _app.Scripts.Interactables {
                 StartCoroutine(DisplayDialogue());
         }
 
-        /**
-         * @TODO Try to modify interacting system to use events instead of reading the GetInteracting function in each frame
-         * @BUG Currently, trying to close the dialogue box while looking at an Interactable object messes with things
-         */
         private IEnumerator DisplayDialogue() {
             // Set isInteracting to true
             isInteracting = true;
             // Display dialogue box
             DialogueBoxManager.Instance.Display(speaker, text);
             // Wait for current interaction to end
-            yield return new WaitWhile(() => InputManager.Instance.GetInteracting());
+            yield return null;
             // Wait until next interaction
             yield return new WaitUntil(() => InputManager.Instance.GetInteracting());
             // Close dialogue box
