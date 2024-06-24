@@ -8,9 +8,13 @@ namespace _app.Scripts.Interactables {
         public string speaker;
         public string text;
 
+        [Header("Interaction Flags")]
+        private bool isInteracting = false;
+
         protected override void Interact() {
-            Debug.Log($"{speaker.ToUpper()}: \"{text}\"");
-            StartCoroutine(DisplayDialogue());
+            // If not interacting, display dialogue
+            if (!isInteracting)
+                StartCoroutine(DisplayDialogue());
         }
 
         /**
@@ -18,6 +22,8 @@ namespace _app.Scripts.Interactables {
          * @BUG Currently, trying to close the dialogue box while looking at an Interactable object messes with things
          */
         private IEnumerator DisplayDialogue() {
+            // Set isInteracting to true
+            isInteracting = true;
             // Display dialogue box
             DialogueBoxManager.Instance.Display(speaker, text);
             // Wait for current interaction to end
@@ -26,6 +32,8 @@ namespace _app.Scripts.Interactables {
             yield return new WaitUntil(() => InputManager.Instance.GetInteracting());
             // Close dialogue box
             DialogueBoxManager.Instance.Close();
+            // Set isInteracting to false
+            isInteracting = false;
         }
     }
 }
