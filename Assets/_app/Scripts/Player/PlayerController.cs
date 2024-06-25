@@ -5,7 +5,14 @@ namespace _app.Scripts.Player
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
     {
+        [Header("Singleton reference")]
+        public static PlayerController Instance { get; private set; }
+
+        [Header("GameObject components")]
+        public PlayerInteract playerInteract { get; private set; }
         private CharacterController controller;
+
+        [Header("Other Fields")]
         private Vector3 playerVelocity;
         private bool groundedPlayer;
         private InputManager inputManager;
@@ -22,9 +29,18 @@ namespace _app.Scripts.Player
         private Vector2 currentMouseDelta;
         private Vector2 currentMouseDeltaVelocity;
 
+        void Awake()
+        {
+            if (!Instance)
+                Instance = this;
+            else
+                Destroy(this);
+        }
+
         private void Start()
         {
             controller = gameObject.GetComponent<CharacterController>();
+            playerInteract = gameObject.GetComponent<PlayerInteract>();
             inputManager = InputManager.Instance;
 
             if (cursorLock)
