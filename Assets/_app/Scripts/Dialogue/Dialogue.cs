@@ -6,6 +6,7 @@ namespace _app.Scripts.Dialogue {
     [Serializable]
     public class Dialogue {
         public string speaker;
+        [TextArea]
         public string text;
 
         public void Open() {
