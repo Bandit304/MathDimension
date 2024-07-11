@@ -199,8 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Talk
-  speaker: Red Amogus
-  text: Sus.
+  dialogueScript: {fileID: 11400000, guid: 1e23159a8cad9f9429d5efb133b6b3c5, type: 2}
 --- !u!136 &260177504
 CapsuleCollider:
   m_ObjectHideFlags: 0
