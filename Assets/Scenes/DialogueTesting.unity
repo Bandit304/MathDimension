@@ -199,7 +199,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Talk
-  dialogueScript: {fileID: 11400000, guid: 1e23159a8cad9f9429d5efb133b6b3c5, type: 2}
+  dialogueScripts:
+  - {fileID: 11400000, guid: bafeedcc80fd77e418250ef77e768bbe, type: 2}
+  - {fileID: 11400000, guid: 4c43db7f872ce9a4d9b3f0c55c1c00cf, type: 2}
+  - {fileID: 11400000, guid: aee5179943f578346a8a3879c4b53d23, type: 2}
 --- !u!136 &260177504
 CapsuleCollider:
   m_ObjectHideFlags: 0
