@@ -4,20 +4,31 @@ using UnityEngine;
 
 namespace _app.Scripts.Interactables {
     public class Talker : Interactable {
+        // ===== Fields =====
+
         [Header("Dialogue Fields")]
-        public DialogueScript dialogueScript;
+        public DialogueScript[] dialogueScripts;
+        private int scriptIndex;
+
+        // ===== Interactable Overrides =====
 
         protected override void Interact() {
             StartCoroutine(DisplayDialogue());
         }
 
+        // ===== Methods =====
+
         private IEnumerator DisplayDialogue() {
+            // Get current script of dialogue
+            DialogueScript dialogueScript = dialogueScripts[scriptIndex];
             // Disable player
             if (!!InputManager.Instance)
                 InputManager.Instance.DisablePlayer();
+            // If dialogue script not defined, end coroutine
+            if (!dialogueScript)
+                yield break;
             // Display dialogue box
-            if (!!dialogueScript)
-                dialogueScript.Open();
+            dialogueScript.Open();
             do {
                 // Wait for current interaction to end
                 yield return null;
@@ -28,6 +39,9 @@ namespace _app.Scripts.Interactables {
             // Enable player
             if (!!InputManager.Instance)
                 InputManager.Instance.EnablePlayer();
+            // Move to next script of dialogue, if applicable
+            if (scriptIndex < dialogueScripts.Length - 1)
+                scriptIndex++;
         }
     }
 }
