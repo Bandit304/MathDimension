@@ -1,31 +1,54 @@
 using System.Collections;
-using _app.Scripts.Managers;
+using _app.Scripts.Dialogue;
 using UnityEngine;
 
 namespace _app.Scripts.Interactables {
     public class Talker : Interactable {
+        // ===== Fields =====
+
         [Header("Dialogue Fields")]
-        public string speaker;
-        public string text;
+        public DialogueScript[] dialogueScripts;
+        private int scriptIndex;
+
+        // ===== Interactable Overrides =====
 
         protected override void Interact() {
-            Debug.Log($"{speaker.ToUpper()}: \"{text}\"");
             StartCoroutine(DisplayDialogue());
         }
 
-        /**
-         * @TODO Try to modify interacting system to use events instead of reading the GetInteracting function in each frame
-         * @BUG Currently, trying to close the dialogue box while looking at an Interactable object messes with things
-         */
+        // ===== Methods =====
+
         private IEnumerator DisplayDialogue() {
+            // Get current script of dialogue
+            DialogueScript dialogueScript = dialogueScripts[scriptIndex];
+
+            // Disable player
+            if (!!InputManager.Instance)
+                InputManager.Instance.DisablePlayer();
+            
+            // If dialogue script not defined, end coroutine
+            if (!dialogueScript)
+                yield break;
+            
             // Display dialogue box
-            DialogueBoxManager.Instance.Display(speaker, text);
-            // Wait for current interaction to end
-            yield return new WaitWhile(() => InputManager.Instance.GetInteracting());
-            // Wait until next interaction
-            yield return new WaitUntil(() => InputManager.Instance.GetInteracting());
-            // Close dialogue box
-            DialogueBoxManager.Instance.Close();
+            dialogueScript.Open();
+        
+            // Cycle through lines of dialogue dialogue in current script
+            do {
+                // Wait for current interaction to end
+                yield return null;
+                // Wait until next interaction
+                yield return new WaitUntil(() => InputManager.Instance.GetInteracting());
+            // Display next dialogue in script
+            } while (dialogueScript.Next());
+            
+            // Move to next script of dialogue, if applicable
+            if (scriptIndex < dialogueScripts.Length - 1)
+                scriptIndex++;
+
+            // Enable player
+            if (!!InputManager.Instance)
+                InputManager.Instance.EnablePlayer();
         }
     }
 }

@@ -1,3 +1,4 @@
+using _app.Scripts.Player;
 using UnityEngine;
 
 namespace _app.Scripts
@@ -54,6 +55,28 @@ namespace _app.Scripts
         public bool GetInteracting()
         {
             return playerControls.Player.Interact.triggered;
+        }
+
+        // Disable player controller and player interact components
+        public void DisablePlayer() {
+            PlayerController playerController = PlayerController.Instance;
+            // Disable Player Interact
+            if (!!playerController.playerInteract)
+                playerController.playerInteract.enabled = false;
+            // Disable Player Controller
+            if (!!playerController)
+                playerController.enabled = false;
+        }
+
+        // Enable player controller and player interact components
+        public void EnablePlayer() {
+            PlayerController playerController = PlayerController.Instance;
+            // Enable Player Interact
+            if (!!playerController.playerInteract)
+                playerController.playerInteract.enabled = true;
+            // Enable Player Controller
+            if (!!playerController)
+                playerController.enabled = true;
         }
     }
 }
