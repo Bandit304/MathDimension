@@ -14,7 +14,7 @@ namespace _app.Scripts.Player
         void Start()
         {
             playerUI = GetComponent<PlayerUI>();
-            //inputs = GetComponent<InputManager>();
+            inputs = InputManager.Instance;
         }
 
         void Update()

@@ -150,6 +150,37 @@ Transform:
   - {fileID: 260177502}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &258159234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374042797397945420, guid: 31141727d65f039439c30b55d6909445, type: 3}
+  m_PrefabInstance: {fileID: 1023902258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &258159238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258159234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 597a155d157ff5343aaf5bd657715f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentUI: {fileID: 1025026376}
+  quizUI: {fileID: 0}
+--- !u!114 &258159239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258159234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1f4556ddef6874088483af2a7a89f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260177501
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,11 +580,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6570720857457639467, guid: 31141727d65f039439c30b55d6909445, type: 3}
+    - {fileID: 6077380092938443653, guid: 31141727d65f039439c30b55d6909445, type: 3}
+    - {fileID: 117791284761261823, guid: 31141727d65f039439c30b55d6909445, type: 3}
+    - {fileID: 5151090511850985988, guid: 31141727d65f039439c30b55d6909445, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1374042797397945420, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 258159239}
+    - targetCorrespondingSourceObject: {fileID: 1374042797397945420, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 258159238}
   m_SourcePrefab: {fileID: 100100000, guid: 31141727d65f039439c30b55d6909445, type: 3}
+--- !u!223 &1025026376 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8086227089247511259, guid: 31141727d65f039439c30b55d6909445, type: 3}
+  m_PrefabInstance: {fileID: 1023902258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1104316516
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +750,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1935982735}
-  - component: {fileID: 1935982736}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -727,21 +772,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1935982736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935982734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af509aea2763364c9e3670b25604d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 0}
-  dialogueSpeaker: {fileID: 0}
-  dialogueText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
