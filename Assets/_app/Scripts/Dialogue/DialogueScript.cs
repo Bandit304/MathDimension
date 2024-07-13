@@ -15,13 +15,14 @@ namespace _app.Scripts.Dialogue {
             // Reset index
             dialogueIndex = 0;
             // Get & open first dialogue in script
-            currentDialogue = dialogues[dialogueIndex];
-            currentDialogue.Open();
+            if (dialogues.Length > 0)
+                currentDialogue = dialogues[dialogueIndex];
+            currentDialogue?.Open();
         }
 
         public bool Next() {
             // Close current dialogue
-            currentDialogue.Close();
+            currentDialogue?.Close();
             // Increment dialogue index
             dialogueIndex++;
             // If all dialogue in script has been read, return false
@@ -29,7 +30,7 @@ namespace _app.Scripts.Dialogue {
                 return false;
             // Else, open next dialogue and return true
             currentDialogue = dialogues[dialogueIndex];
-            currentDialogue.Open();
+            currentDialogue?.Open();
             return true;
         }
     }
