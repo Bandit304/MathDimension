@@ -2,6 +2,7 @@ using _app.Scripts;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using _app.Scripts.Managers;
 
 public class TutorialQuiz : MonoBehaviour
 {

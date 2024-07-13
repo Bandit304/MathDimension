@@ -1,5 +1,6 @@
 using System.Collections;
 using _app.Scripts.Dialogue;
+using _app.Scripts.Managers;
 using UnityEngine;
 
 namespace _app.Scripts.Interactables {

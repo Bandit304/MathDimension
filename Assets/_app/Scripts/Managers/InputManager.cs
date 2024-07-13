@@ -1,7 +1,7 @@
 using _app.Scripts.Player;
 using UnityEngine;
 
-namespace _app.Scripts
+namespace _app.Scripts.Managers
 {
     public class InputManager : MonoBehaviour
     {
