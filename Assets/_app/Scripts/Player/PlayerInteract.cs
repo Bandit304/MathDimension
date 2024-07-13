@@ -1,4 +1,5 @@
 using UnityEngine;
+using _app.Scripts.Interactables;
 
 namespace _app.Scripts.Player
 {
