@@ -19,16 +19,16 @@ namespace _app.Scripts.Interactables {
         // ===== Methods =====
 
         private IEnumerator DisplayDialogue() {
+            // If dialogueScripts empty, end coroutine
+            if (dialogueScripts.Length == 0)
+                yield break;
+
             // Get current script of dialogue
             DialogueScript dialogueScript = dialogueScripts[scriptIndex];
 
             // Disable player
             if (!!InputManager.Instance)
                 InputManager.Instance.DisablePlayer();
-            
-            // If dialogue script not defined, end coroutine
-            if (!dialogueScript)
-                yield break;
             
             // Display dialogue box
             dialogueScript.Open();
