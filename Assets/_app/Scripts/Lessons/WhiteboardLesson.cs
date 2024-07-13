@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace _app.Scripts
+namespace _app.Scripts.Lessons
 {
     public class WhiteboardLesson : MonoBehaviour
     {
