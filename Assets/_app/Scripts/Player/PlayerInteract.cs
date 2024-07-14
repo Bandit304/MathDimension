@@ -1,4 +1,6 @@
 using UnityEngine;
+using _app.Scripts.Interactables;
+using _app.Scripts.Managers;
 
 namespace _app.Scripts.Player
 {
@@ -12,7 +14,7 @@ namespace _app.Scripts.Player
         void Start()
         {
             playerUI = GetComponent<PlayerUI>();
-            //inputs = GetComponent<InputManager>();
+            inputs = InputManager.Instance;
         }
 
         void Update()

@@ -1,4 +1,4 @@
-namespace _app.Scripts
+namespace _app.Scripts.Interactables
 {
     public class EventOnlyInteractable : Interactable
     {

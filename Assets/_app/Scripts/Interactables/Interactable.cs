@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _app.Scripts
+namespace _app.Scripts.Interactables
 {
     public abstract class Interactable : MonoBehaviour
     {
