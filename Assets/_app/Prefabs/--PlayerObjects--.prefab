@@ -337,8 +337,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6352369187227197826}
-        m_TargetAssemblyTypeName: TutorialQuiz, Assembly-CSharp
+      - m_Target: {fileID: 8123664040865450394}
+        m_TargetAssemblyTypeName: LevelQuiz, Assembly-CSharp
         m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 2922076697212171211}
   - component: {fileID: 8220309396280926947}
   - component: {fileID: 505775881509392956}
-  - component: {fileID: 6352369187227197826}
+  - component: {fileID: 8123664040865450394}
   m_Layer: 5
   m_Name: QuizMenu
   m_TagString: Untagged
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6352369187227197826
+--- !u!114 &8123664040865450394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,10 +465,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2382030213143113250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d202f23bbf0eae843b631bc7c2ea3f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 608b81d688af0954d9e13e0b173fbe8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteboardText: {fileID: 2699267189675724958}
+  questionText: {fileID: 2699267189675724958}
   answerInput: {fileID: 8599031871493648927}
   exitButton: {fileID: 7514230972460067048}
 --- !u!1 &2408555573126583227
@@ -592,8 +592,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6352369187227197826}
-        m_TargetAssemblyTypeName: TutorialQuiz, Assembly-CSharp
+      - m_Target: {fileID: 8123664040865450394}
+        m_TargetAssemblyTypeName: LevelQuiz, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -1526,14 +1526,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 2
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 2
+  m_CharacterValidation: 3
   m_RegexValue: 
   m_GlobalPointSize: 40
   m_CharacterLimit: 0

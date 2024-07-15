@@ -15,7 +15,7 @@ namespace _app.Scripts.Operators
 
         public double Calculate()
         {
-            return Math.Round((x.Calculate() / y.Calculate()), 2, MidpointRounding.AwayFromZero);
+            return x.Calculate() / y.Calculate();
         }
     }
 }
