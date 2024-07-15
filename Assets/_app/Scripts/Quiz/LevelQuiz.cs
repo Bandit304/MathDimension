@@ -34,16 +34,18 @@ public class LevelQuiz : MonoBehaviour
 
     public void Submit()
     {
+        string symbol = OperatorManager.Instance.GetSymbol();
+        string symbolText = " " + symbol + " ";
         response = int.Parse(answerInput.text);
 
         if (solution == response)
         {
-            questionText.text = num1 + " + " + num2 + " = " + solution + "\nCorrect!";
+            questionText.text = num1 + symbolText + num2 + " = " + solution + "\nCorrect! You win!";
             exitButton.gameObject.SetActive(true);
         }
         else
         {
-            questionText.text = num1 + " + " + num2 + " = ?" + "\nIncorrect";
+            questionText.text = num1 + symbolText + num2 + " = ?" + "\nIncorrect";
         }
     }
 

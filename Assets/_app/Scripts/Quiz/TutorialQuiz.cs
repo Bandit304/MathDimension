@@ -3,10 +3,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using _app.Scripts.Managers;
+using UnityEngine.SceneManagement;
 
 public class TutorialQuiz : MonoBehaviour
 {
-    [SerializeField]private TextMeshProUGUI whiteboardText;
+    [SerializeField] private TextMeshProUGUI whiteboardText;
     [SerializeField] private TMP_InputField answerInput;
     [SerializeField] private Button exitButton;
     private int num1 = 0;
@@ -49,6 +50,8 @@ public class TutorialQuiz : MonoBehaviour
     {
         EnableMovement();
         UIManager.Instance.EndQuiz();
+        
+        SceneManager.LoadScene (sceneName:"Level1");
     }
     
     private void EnableMovement()
