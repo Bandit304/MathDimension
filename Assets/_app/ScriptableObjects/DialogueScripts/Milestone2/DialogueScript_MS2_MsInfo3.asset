@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc039f976e81f444a949953441b506fd, type: 3}
+  m_Name: DialogueScript_MS2_MsInfo3
+  m_EditorClassIdentifier: 
+  dialogues:
+  - speaker: Al
+    text: Hey, when are your office hours?
+  - speaker: Ms. Information
+    text: Oh, I'm available to help you anytime!
+  - speaker: Ms. Information
+    text: Except for Fridays from 3-4pm, that is.
+  - speaker: Al
+    text: Why? What's so special about 3-4 on a Friday?
+  - speaker: Ms. Information
+    text: I've got a group meeting. It's the Universal Meeting Time, didn't you know?
