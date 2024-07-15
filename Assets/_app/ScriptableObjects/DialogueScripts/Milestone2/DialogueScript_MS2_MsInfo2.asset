@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc039f976e81f444a949953441b506fd, type: 3}
+  m_Name: DialogueScript_MS2_MsInfo2
+  m_EditorClassIdentifier: 
+  dialogues:
+  - speaker: Ms. Information
+    text: Silly me! I forgot to grab your name!
+  - speaker: Al
+    text: I'm Al.
+  - speaker: Ms. Information
+    text: Is that short for anything?
+  - speaker: Al
+    text: Alligator.
+  - speaker: Ms. Information
+    text: I thought you were a crocodile?
+  - speaker: All
+    text: What's a crocodile?
+  - speaker: Ms. Information
+    text: It's what you are.
+  - speaker: Al
+    text: No, I'm Al.
