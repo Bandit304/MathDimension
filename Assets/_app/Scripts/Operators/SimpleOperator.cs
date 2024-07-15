@@ -20,7 +20,7 @@ namespace _app.Scripts.Operators
                     break;
                 // Doubles the first number and subtracts the second
                 case 1:
-                    equation = new Add(new Multiply(x, new Literal(2)), y);
+                    equation = new Subtract(new Multiply(x, new Literal(2)), y);
                     break;
                 // Defaults to the first custom in case of invalid value
                 default:
