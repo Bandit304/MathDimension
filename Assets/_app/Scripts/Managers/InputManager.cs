@@ -78,5 +78,8 @@ namespace _app.Scripts.Managers
             if (!!playerController)
                 playerController.enabled = true;
         }
+
+        // Toggle notebook UI
+        public bool IsTogglingNotebookUI() => playerControls.Player.ToggleNotebook.triggered;
     }
 }

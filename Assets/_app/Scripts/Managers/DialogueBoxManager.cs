@@ -11,6 +11,9 @@ namespace _app.Scripts.Managers {
         public TMP_Text dialogueSpeaker;
         public TMP_Text dialogueText;
 
+        [Header("Flags for other managers")]
+        public bool IsDisplaying { get; private set; }
+
         // Awake is called once before the first execution of Start after the MonoBehaviour is created
         void Awake() {
             if (!Instance)
@@ -26,6 +29,8 @@ namespace _app.Scripts.Managers {
         }
 
         public void Display(string speaker, string text) {
+            // Set IsDisplaying flag to true
+            IsDisplaying = true;
             // Set dialogue speaker
             if (!!dialogueSpeaker)
                 dialogueSpeaker.text = speaker;
@@ -38,6 +43,8 @@ namespace _app.Scripts.Managers {
         }
 
         public void Close() {
+            // set IsDisplaying flag to false
+            IsDisplaying = false;
             // Set dialogue speaker
             if (!!dialogueSpeaker)
                 dialogueSpeaker.text = "";

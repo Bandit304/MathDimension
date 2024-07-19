@@ -54,6 +54,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Toggle Notebook"",
+                    ""type"": ""Button"",
+                    ""id"": ""11ceb96c-7ea3-4320-9ce7-23dbd39e0b97"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -142,6 +151,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9485944c-7fa6-452f-a969-2303f19ffced"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Toggle Notebook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c492f6d6-183a-47fc-a736-fc8aabd25965"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Toggle Notebook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -671,6 +702,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_ToggleNotebook = m_Player.FindAction("Toggle Notebook", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -753,6 +785,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_ToggleNotebook;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -760,6 +793,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @ToggleNotebook => m_Wrapper.m_Player_ToggleNotebook;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -778,6 +812,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @ToggleNotebook.started += instance.OnToggleNotebook;
+            @ToggleNotebook.performed += instance.OnToggleNotebook;
+            @ToggleNotebook.canceled += instance.OnToggleNotebook;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -791,6 +828,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @ToggleNotebook.started -= instance.OnToggleNotebook;
+            @ToggleNotebook.performed -= instance.OnToggleNotebook;
+            @ToggleNotebook.canceled -= instance.OnToggleNotebook;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -931,6 +971,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnToggleNotebook(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
