@@ -22,6 +22,9 @@ namespace _app.Scripts.Managers {
             }
         }
 
+        // Stores cursor lock state for opening notebook UI over other UI
+        private CursorLockMode originalLockState;
+
         // ===== Unity Lifecycle Events =====
 
         // Awake is called once before the first execution of Start after the MonoBehaviour is created
@@ -45,6 +48,8 @@ namespace _app.Scripts.Managers {
         private void Display() {
             // Disable player movement
             InputManager.Instance.DisablePlayer();
+            // Store current lock state
+            originalLockState = Cursor.lockState;
             // Allow use of mouse
             Cursor.lockState = CursorLockMode.Confined;
             // Display notebook UI
@@ -55,8 +60,8 @@ namespace _app.Scripts.Managers {
         private void Close() {
             // Disable player movement
             InputManager.Instance.EnablePlayer();
-            // Allow use of mouse
-            Cursor.lockState = CursorLockMode.Locked;
+            // Restore cursor lock state
+            Cursor.lockState = originalLockState;
             // Display notebook UI
             if (!!notebookUI)
                 notebookUI.enabled = false;

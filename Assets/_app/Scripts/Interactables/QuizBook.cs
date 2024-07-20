@@ -16,7 +16,7 @@ namespace _app.Scripts.Interactables
         private void DisableMovement()
         {
             Cursor.lockState = CursorLockMode.Confined;
-            InputManager.Instance.enabled = false;
+            InputManager.Instance.DisablePlayer();
         }
     }
 }
