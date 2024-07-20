@@ -1,3 +1,4 @@
+using _app.Scripts.Notebook;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ namespace _app.Scripts.Managers {
         [Header("Notebook UI")]
         [SerializeField] private Canvas notebookUI;
         private TMP_InputField notebookText;
+
+        [Header("Notebook Data Storage")]
+        public NotebookData data;
 
         [Header("UI Toggle Flags")]
         // Fields that determine if the notebook UI can be toggled or not.
@@ -40,6 +44,13 @@ namespace _app.Scripts.Managers {
             if (!!notebookUI) {
                 notebookUI.enabled = false;
                 notebookText = notebookUI.GetComponentInChildren<TMP_InputField>();
+            }
+
+            if (!!data && !!notebookText) {
+                // Retrieve notebook contents
+                notebookText.text = data.notebookContents;
+                // Set TextArea to save contents when done editing
+                notebookText.onEndEdit.AddListener(SaveNotebookContents);
             }
         }
 
@@ -82,6 +93,12 @@ namespace _app.Scripts.Managers {
                 if (!!UIManager.Instance)
                     UIManager.Instance.enabled = true;
             }
+        }
+
+        // For use in the TMP_InputField's OnEditEnd event
+        public void SaveNotebookContents(string contents) {
+            if (!!data)
+                data.notebookContents = contents;
         }
     }
 }

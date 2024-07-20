@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookUI: {fileID: 7409698098216162007}
-  originalLockState: 0
+  data: {fileID: 11400000, guid: 2ba7c836bd070a04898874f798bd8cf8, type: 2}
 --- !u!1 &5614822919401013724
 GameObject:
   m_ObjectHideFlags: 0
