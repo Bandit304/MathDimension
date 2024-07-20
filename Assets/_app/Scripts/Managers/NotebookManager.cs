@@ -95,10 +95,13 @@ namespace _app.Scripts.Managers {
             }
         }
 
-        // For use in the TMP_InputField's OnEditEnd event
+        // For use in the TMP_InputField's OnEndEdit event
         public void SaveNotebookContents(string contents) {
             if (!!data)
                 data.notebookContents = contents;
         }
+
+        // Only call when the game starts over from the beginning
+        public void ResetNotebookData() => SaveNotebookContents("");
     }
 }
