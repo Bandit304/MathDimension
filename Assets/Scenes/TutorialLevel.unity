@@ -2874,6 +2874,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1297021472846751230, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297021472846751230, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
+      propertyPath: m_NumberOfSteps
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1583089608263323604, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
       propertyPath: m_Name
       value: --NotebookUI--
@@ -2957,6 +2965,14 @@ PrefabInstance:
     - target: {fileID: 2413795204660851544, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984298986339096411, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845133683334163497, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8405922651895668777, guid: 02093e32b9385cd4e9997dc7716b8c8a, type: 3}
       propertyPath: m_AnchorMax.x
