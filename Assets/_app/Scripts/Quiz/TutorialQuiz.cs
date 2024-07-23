@@ -57,6 +57,6 @@ public class TutorialQuiz : MonoBehaviour
     private void EnableMovement()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        InputManager.Instance.enabled = true;
+        InputManager.Instance.EnablePlayer();
     }
 }

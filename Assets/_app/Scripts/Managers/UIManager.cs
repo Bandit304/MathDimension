@@ -3,6 +3,7 @@ using UnityEngine;
 namespace _app.Scripts.Managers {
     public class UIManager : MonoBehaviour
     {
+        // ===== Fields =====
         [SerializeField] private Canvas environmentUI;
         [SerializeField] private Canvas quizUI;
         
@@ -15,6 +16,9 @@ namespace _app.Scripts.Managers {
                 return _instance;
             }
         }
+
+        // ===== Unity Lifecycle Events =====
+
         void Awake()
         {
             if (_instance != null && _instance != this)
@@ -30,6 +34,22 @@ namespace _app.Scripts.Managers {
             environmentUI.gameObject.SetActive(true);
             quizUI.gameObject.SetActive(false);
         }
+
+        void OnEnable() {
+            if (!!environmentUI)
+                environmentUI.enabled = true;
+            if (!!quizUI)
+                quizUI.enabled = true;
+        }
+
+        void OnDisable() {
+            if (!!environmentUI)
+                environmentUI.enabled = false;
+            if (!!quizUI)
+                quizUI.enabled = false;
+        }
+
+        // ===== Methods =====
 
         public void StartQuiz()
         {

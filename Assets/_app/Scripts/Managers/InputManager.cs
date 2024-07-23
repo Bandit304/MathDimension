@@ -17,6 +17,9 @@ namespace _app.Scripts.Managers
     
         private PlayerInputs playerControls;
 
+        // int keeping track of how many things currently require the player to be disabled
+        private int disableCount;
+
         private void Awake()
         {
             // playerControls manages input from the Player Input System
@@ -59,24 +62,39 @@ namespace _app.Scripts.Managers
 
         // Disable player controller and player interact components
         public void DisablePlayer() {
-            PlayerController playerController = PlayerController.Instance;
-            // Disable Player Interact
-            if (!!playerController.playerInteract)
-                playerController.playerInteract.enabled = false;
-            // Disable Player Controller
-            if (!!playerController)
-                playerController.enabled = false;
+            // Increment disable count
+            disableCount++;
+
+            // If player is still enabled, disable player
+            if (disableCount == 1) {
+                PlayerController playerController = PlayerController.Instance;
+                // Disable Player Interact
+                if (!!playerController.playerInteract)
+                    playerController.playerInteract.enabled = false;
+                // Disable Player Controller
+                if (!!playerController)
+                    playerController.enabled = false;
+            }
         }
 
         // Enable player controller and player interact components
         public void EnablePlayer() {
-            PlayerController playerController = PlayerController.Instance;
-            // Enable Player Interact
-            if (!!playerController.playerInteract)
-                playerController.playerInteract.enabled = true;
-            // Enable Player Controller
-            if (!!playerController)
-                playerController.enabled = true;
+            // Decrement disable count
+            disableCount--;
+
+            // If nothing requires the player to be disabled, enable player
+            if (disableCount == 0) {
+                PlayerController playerController = PlayerController.Instance;
+                // Enable Player Interact
+                if (!!playerController.playerInteract)
+                    playerController.playerInteract.enabled = true;
+                // Enable Player Controller
+                if (!!playerController)
+                    playerController.enabled = true;
+            }
         }
+
+        // Toggle notebook UI
+        public bool IsTogglingNotebookUI() => playerControls.Player.ToggleNotebook.triggered;
     }
 }
