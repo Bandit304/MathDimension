@@ -1,21 +1,22 @@
-using UnityEngine;
-
-public class Literal : ICalculable
+namespace _app.Scripts.Operators
 {
-    public double number;
-
-    public Literal(double num)
+    public class Literal : ICalculable
     {
-        number = num;
-    }
+        public double number;
+
+        public Literal(double num)
+        {
+            number = num;
+        }
     
-    public Literal()
-    {
-        number = 1;
-    }
+        public Literal()
+        {
+            number = 1;
+        }
 
-    public double Calculate()
-    {
-        return number;
+        public double Calculate()
+        {
+            return number;
+        }
     }
 }

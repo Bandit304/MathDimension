@@ -840,6 +840,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8043342532274035220, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_Name
       value: --PlayerObjects--
@@ -899,6 +907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930414480}
   - component: {fileID: 1930414479}
+  - component: {fileID: 1930414481}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -918,6 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fa67c95ab49f945830a80182a5b001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 540c4a76b88f5114a96b0705098c9047, type: 2}
 --- !u!4 &1930414480
 Transform:
   m_ObjectHideFlags: 0
@@ -933,6 +943,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930414481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930414478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef19a2576e713814e89977f0c0ef5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2045627826
 GameObject:
   m_ObjectHideFlags: 0

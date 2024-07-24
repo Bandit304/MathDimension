@@ -1,18 +1,19 @@
-using UnityEngine;
-
-public class Add : ICalculable
+namespace _app.Scripts.Operators
 {
-    public ICalculable x;
-    public ICalculable y;
-
-    public Add(ICalculable _x, ICalculable _y)
+    public class Add : ICalculable
     {
-        x = _x;
-        y = _y;
-    }
+        public ICalculable x;
+        public ICalculable y;
 
-    public double Calculate()
-    {
-        return x.Calculate() + y.Calculate();
+        public Add(ICalculable _x, ICalculable _y)
+        {
+            x = _x;
+            y = _y;
+        }
+
+        public double Calculate()
+        {
+            return x.Calculate() + y.Calculate();
+        }
     }
 }
