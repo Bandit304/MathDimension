@@ -928,6 +928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 540c4a76b88f5114a96b0705098c9047, type: 2}
+  currentLevel: 1
 --- !u!4 &1930414480
 Transform:
   m_ObjectHideFlags: 0

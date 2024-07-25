@@ -11,7 +11,7 @@ namespace _app.Scripts.Lessons
     
         void Start()
         {
-            OperatorManager.Instance.GenerateSimpleOperator();
+            OperatorManager.Instance.GenerateOperator();
             generateLesson();
         }
         

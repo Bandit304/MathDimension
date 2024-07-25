@@ -10,7 +10,10 @@ namespace _app.Scripts.Managers
 
         [Header("Operator Data Storage")] 
         public OperatorData data;
-    
+
+        [Header("Level Info")] 
+        public int currentLevel;
+        
         // OperatorManager is a singleton, it stores and utilizes the stored equations when they are needed
         // so we don't want multiple
         private static OperatorManager _instance;
@@ -34,11 +37,21 @@ namespace _app.Scripts.Managers
             }
         }
 
-        public void GenerateSimpleOperator()
+        public void GenerateOperator()
         {
             if (!!data && (data.opsCount < 5))
             {
-                data.operatorArray[data.opsCount] = new SimpleOperator();
+                switch (currentLevel)
+                {
+                    // Will generate an operator of varying difficulty based on the level
+                    case 1:
+                        data.operatorArray[data.opsCount] = new SimpleOperator();
+                        break;
+                    default:
+                        data.operatorArray[data.opsCount] = new SimpleOperator();
+                        break;
+                }
+                
                 data.opsCount++;
             }
         }
@@ -49,6 +62,17 @@ namespace _app.Scripts.Managers
             if (!!data && (data.opsCount > 0))
             {
                 return data.operatorArray[data.opsCount - 1].RunCalculation(x, y);
+            }
+            // In case of problems, return 0
+            return 0;
+        }
+        
+        // Specifies op
+        public double Calculate(double x, double y, int opNum)
+        {
+            if (!!data && (data.opsCount > 0) && (opNum <= data.opsCount))
+            {
+                return data.operatorArray[opNum - 1].RunCalculation(x, y);
             }
             // In case of problems, return 0
             return 0;
@@ -98,6 +122,12 @@ namespace _app.Scripts.Managers
         {
             data.operatorArray = new CustomOperator[5];
             data.opsCount = 0;
+        }
+        
+        // Returns Current Level for use of picking operators
+        public int GetLevel()
+        {
+            return currentLevel;
         }
     }
 }
