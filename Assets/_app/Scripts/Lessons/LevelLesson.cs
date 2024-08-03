@@ -1,3 +1,4 @@
+using _app.Scripts.Managers;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace _app.Scripts.Lessons
     
         void Start()
         {
-            OperatorManager.Instance.GenerateSimpleOperator();
+            OperatorManager.Instance.GenerateOperator();
             generateLesson();
         }
         

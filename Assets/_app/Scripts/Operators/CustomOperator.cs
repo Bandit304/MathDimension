@@ -10,10 +10,20 @@ namespace _app.Scripts.Operators
         public string name { get; set; }
         // public Material symbol { get; set; }
         public string symbol { get; set; }
-        private string[] opSymbolArray = { "&@#", "<^>", ":^)" };
+        private string[] opSymbolArray =
+        {
+            "&@#", "<^>", ":^)", "&*&", "UIU", "(^)", "\\|/", "-+-", "$$$",
+            ".'.", "!#!", ":.:", "OVO", ">^<", ")w(", "{*}", "{>}", "{<}",
+            "','", "#!#", "#@#", "%*%", "-%-", ">-<", "\\./", "(*)", "/T\\"
+        };
         protected Literal x;
         protected Literal y;
-        private string[] opNamesArray = {"Glorbo", "ExSine", "John"};
+        private string[] opNamesArray =
+        {
+            "Glorbo", "ExSine", "John", "Leppa", "Skrep", "Blorange", "Tlabber", "RKS",
+            "Maxim", "Brick", "Leital", "Cromp", "Blorgo", "Prum", "Zlide", "Ribble",
+            "Ulpy", "Freb", "Querp", "Yulb", "Morp", "Belch"
+        };
         // private int symbolCount = 3;
 
         public CustomOperator()
@@ -36,6 +46,18 @@ namespace _app.Scripts.Operators
             x.number = _x;
             y.number = _y;
             return Math.Round(equation.Calculate(), 2, MidpointRounding.AwayFromZero);
+        }
+
+        public void SelectNewName()
+        {
+            int selectName = Random.Range(0, opNamesArray.Length);
+            name = opNamesArray[selectName];
+        }
+
+        public void SelectNewSymbol()
+        {
+            int selectSymbol = Random.Range(0, opSymbolArray.Length);
+            symbol = opSymbolArray[selectSymbol];
         }
     }
 }
