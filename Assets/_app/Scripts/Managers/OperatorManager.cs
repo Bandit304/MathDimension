@@ -1,3 +1,5 @@
+using System;
+using System.Numerics;
 using _app.Scripts.Operators;
 using UnityEngine;
 
@@ -47,10 +49,40 @@ namespace _app.Scripts.Managers
                     case 1:
                         data.operatorArray[data.opsCount] = new SimpleOperator();
                         break;
+                    case 2:
+                        data.operatorArray[data.opsCount] = new SimpleOperator();
+                        break;
+                    case 3:
+                        data.operatorArray[data.opsCount] = new IntermediateOperator();
+                        break;
+                    case 4:
+                        data.operatorArray[data.opsCount] = new IntermediateOperator();
+                        break;
+                    case 5:
+                        data.operatorArray[data.opsCount] = new ComplexOperator();
+                        break;
                     default:
                         data.operatorArray[data.opsCount] = new SimpleOperator();
                         break;
                 }
+                
+                // In case the randomly selected name is taken already, a new one will be generated until
+                // a new one is found
+                while (Array.IndexOf(data.usedNames, data.operatorArray[data.opsCount].name) > -1)
+                {
+                    data.operatorArray[data.opsCount].SelectNewName();
+                }
+                // The same is done for the symbol
+                while (Array.IndexOf(data.usedSymbols, data.operatorArray[data.opsCount].symbol) > -1)
+                {
+                    data.operatorArray[data.opsCount].SelectNewSymbol();
+                }
+                
+                // Add Symbol and Name to respective arrays and increment counters
+                data.usedNames[data.opsCount] = data.operatorArray[data.opsCount].name;
+                data.usedSymbols[data.opsCount] = data.operatorArray[data.opsCount].symbol;
+                data.nameCount++;
+                data.symbolCount++;
                 
                 data.opsCount++;
             }
@@ -122,6 +154,10 @@ namespace _app.Scripts.Managers
         {
             data.operatorArray = new CustomOperator[5];
             data.opsCount = 0;
+            data.usedNames = new string[5];
+            data.nameCount = 0;
+            data.usedSymbols = new string[5];
+            data.symbolCount = 0;
         }
         
         // Returns Current Level for use of picking operators
