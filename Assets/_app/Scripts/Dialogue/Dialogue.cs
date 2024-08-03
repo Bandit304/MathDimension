@@ -11,6 +11,7 @@ namespace _app.Scripts.Dialogue {
         public string text;
 
         [Header("Dialogue Audio")]
+        // Dictionary key of dialogue audio in AudioDictionary file
         public string audioKey;
 
         public void Open() {

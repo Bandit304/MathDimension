@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace _app.Scripts.Dialogue {
-    [CreateAssetMenu(fileName = "DialogueScript", menuName = "Scriptable Objects/DialogueScript")]
-    public class DialogueScript : ScriptableObject {
+    [Serializable]
+    public class DialogueScript {
         // ===== Fields =====
         protected int dialogueIndex = 0;
         protected Dialogue currentDialogue;

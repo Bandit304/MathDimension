@@ -119,6 +119,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 561008271063901119}
   dialogueSpeaker: {fileID: 2955195653567035485}
   dialogueText: {fileID: 783091235664137001}
+  dialogueData: {fileID: 11400000, guid: 6dce4ec19797f92489f8bddcdab4c64f, type: 2}
 --- !u!1 &4268966386960132709
 GameObject:
   m_ObjectHideFlags: 0
