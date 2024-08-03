@@ -11,10 +11,6 @@ namespace _app.Scripts.Audio {
         public SerializableDictionary<string, AudioClip[]> clipDictionary;
         
         // ===== Methods =====
-
-        public void Initialize() {
-            clipDictionary.Initialize();
-        }
         
         public AudioClip GetRandomClip(string groupKey) {
             // Try to get value from dictionary
