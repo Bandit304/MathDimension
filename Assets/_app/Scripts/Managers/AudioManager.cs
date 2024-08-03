@@ -7,7 +7,7 @@ namespace _app.Scripts.Managers {
         public static AudioManager Instance { get; private set; }
 
         [Header("Audio Components")]
-        public AudioSource GlobalAudioSource { get; private set; }
+        public AudioSource GlobalAudioSource;
 
         // ===== Unity Lifecycle Events =====
 
