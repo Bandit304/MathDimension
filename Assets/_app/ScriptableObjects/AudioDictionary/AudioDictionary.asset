@@ -52,7 +52,7 @@ MonoBehaviour:
       value:
       - {fileID: 8300000, guid: 9fbf7ef0589739d4b886340c0e3d22fb, type: 3}
       - {fileID: 8300000, guid: e7aa1c9624435404394988836744d818, type: 3}
-    - key: Audio_Al_Neutral
+    - key: Audio_Al_Generic
       value:
       - {fileID: 8300000, guid: 262d176588171bd47ae75b70cba7f690, type: 3}
       - {fileID: 8300000, guid: 3526011f7e23e504bbb06307b5f33cab, type: 3}
@@ -61,6 +61,9 @@ MonoBehaviour:
       value:
       - {fileID: 8300000, guid: 772e9377f67091c45a41e416117a40f3, type: 3}
       - {fileID: 8300000, guid: 38d9be77e48aa024fb9a3a5f52be3cbf, type: 3}
+    - key: Audio_Al_Alligator
+      value:
+      - {fileID: 8300000, guid: b10d15b6bd05db64a8ee3a7f4d3f49d6, type: 3}
     - key: Audio_Al_Amogus
       value:
       - {fileID: 8300000, guid: 92f58b7ce64c1db48852070c72c75a16, type: 3}

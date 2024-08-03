@@ -14,8 +14,9 @@ namespace _app.Scripts.Audio {
         
         public AudioClip GetRandomClip(string groupKey) {
             // Try to get value from dictionary
-            clipDictionary.TryGetValue(groupKey, out AudioClip[] output);
-
+            if (!clipDictionary.TryGetValue(groupKey, out AudioClip[] output))
+                return null;
+            
             // If output does not contain any audio clips, return null
             if (output.Length == 0)
                 return null;
