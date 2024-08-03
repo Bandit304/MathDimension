@@ -14,7 +14,7 @@ namespace _app.Scripts.Quiz
         private double num2 = 0;
         private double solution = 0;
         private string questionPrompt;
-        private int response;
+        private double response;
         private int opNum;
         void OnEnable()
         {
