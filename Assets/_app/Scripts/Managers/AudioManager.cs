@@ -36,7 +36,9 @@ namespace _app.Scripts.Managers {
             }
         }
 
-        public void PlayRandomAudioFromKey(string audioKey) =>
-            PlayGlobalAudio(audioDictionary.GetRandomClip(audioKey));
+        public void PlayRandomAudioFromKey(string audioKey) {
+            if (!!audioDictionary)
+                PlayGlobalAudio(audioDictionary.GetRandomClip(audioKey));
+        }
     }
 }
