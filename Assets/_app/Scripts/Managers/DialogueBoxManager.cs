@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using _app.Scripts.Dialogue;
 using TMPro;
 using UnityEngine;
 
@@ -14,12 +16,19 @@ namespace _app.Scripts.Managers {
         [Header("Flags for other managers")]
         public bool IsDisplaying { get; private set; }
 
+        [Header("Dialogue Data")]
+        public DialogueData dialogueData;
+
         // Awake is called once before the first execution of Start after the MonoBehaviour is created
         void Awake() {
             if (!Instance)
                 Instance = this;
             else
                 Destroy(this);
+
+            // Initialize dialogueData dictionary
+            if (!!dialogueData)
+                dialogueData.scripts.Initialize();
         }
 
         void Start() {
@@ -54,6 +63,19 @@ namespace _app.Scripts.Managers {
             // Display dialogue UI
             if (!!dialogueUI)
                 dialogueUI.enabled = false;
+        }
+
+        public DialogueScript[] GetScripts(string[] scriptKeys) {
+            // If dialogue data does not exist, return
+            if (!dialogueData)
+                return null;
+            // Create list of dialogue scripts
+            List<DialogueScript> scripts = new List<DialogueScript>();
+            // Get scripts from scriptKeys
+            foreach (string scriptKey in scriptKeys)
+                scripts.Add(dialogueData.GetScript(scriptKey));
+            // Return list of scripts, converted to array
+            return scripts.ToArray();
         }
     }
 }

@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484484971608cb44996b6ae9e704e2ee, type: 3}
+  m_Name: DialogueData
+  m_EditorClassIdentifier: 
+  scripts:
+    _dictionary:
+    - key: Dialogue_MsInfo_Tutorial1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: "Hello there! Welcome to the\n\rM A T H   D I M E N S I O N !"
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: What? Who are you? Why am I here?
+          audioKey: Audio_Al_Math
+        - speaker: Ms. Information
+          text: I am your teacher, Ms. Information, and you're here because your
+            math skills are severely lacking!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: Learn the operations I teach you and get a good enough grade on the
+            quiz, and you can leave!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: What if I fail the quiz?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Don't.
+          audioKey: Audio_MsInfo_Dont1
+        - speaker: Al
+          text: What? Why N-
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: DON'T.
+          audioKey: Audio_MsInfo_Dont2
+        - speaker: Ms. Information
+          text: Good luck!
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_Tutorial2
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Silly me! I forgot to grab your name!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: I'm Al.
+          audioKey: Audio_Al_Hello
+        - speaker: Ms. Information
+          text: Is that short for anything?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Alligator.
+          audioKey: Audio_Al_Alligator
+        - speaker: Ms. Information
+          text: I thought you were a crocodile?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: What's a crocodile?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: It's what you are.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: No, I'm Al.
+          audioKey: Audio_Al_Hello
+    - key: Dialogue_MsInfo_Tutorial3
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, when are your office hours?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Oh, I'm available to help you anytime!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: Except for Fridays from 3-4pm, that is.
+          audioKey: Audio_MsInfo_Dont1
+        - speaker: Al
+          text: Why? What's so special about 3-4 on a Friday?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: I've got a group meeting. It's the Universal Meeting Time, didn't
+            you know?
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_Tutorial4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Go learn some math already!
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_RedAmogus_Test1
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: SussyBaka
+          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: What? How?
+          audioKey: Audio_Al_Amogus
+    - key: Dialogue_RedAmogus_Test2
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: 'Sus? Haha Sussy Baka!
+
+            Imposter Among Us!'
+          audioKey: 
+        - speaker: Al
+          text: Please, just stop! I'll give you whatever you want!
+          audioKey: 
+        - speaker: Red Amogus
+          text: Emergency Meeting!
+          audioKey: 
+    - key: Dialogue_RedAmogus_Test3
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: '*Red Amogus was ejected.*'
+          audioKey: 

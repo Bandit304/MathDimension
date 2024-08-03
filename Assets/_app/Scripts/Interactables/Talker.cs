@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using _app.Scripts.Dialogue;
 using _app.Scripts.Managers;
@@ -8,8 +9,18 @@ namespace _app.Scripts.Interactables {
         // ===== Fields =====
 
         [Header("Dialogue Fields")]
-        public DialogueScript[] dialogueScripts;
+        // Dictionary keys of dialogue scripts in DialogueData file
+        [SerializeField] private string[] dialogueScriptKeys;
+        [HideInInspector] public DialogueScript[] dialogueScripts;
         private int scriptIndex;
+
+        // ===== Unity Lifecycle Events =====
+
+        public void Start() {
+            // Get dialogue scripts from script keys
+            if (!!DialogueBoxManager.Instance && dialogueScriptKeys.Length != 0)
+                dialogueScripts = DialogueBoxManager.Instance.GetScripts(dialogueScriptKeys);
+        }
 
         // ===== Interactable Overrides =====
 

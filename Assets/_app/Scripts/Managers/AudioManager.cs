@@ -1,3 +1,4 @@
+using _app.Scripts.Audio;
 using UnityEngine;
 
 namespace _app.Scripts.Managers {
@@ -9,6 +10,9 @@ namespace _app.Scripts.Managers {
         [Header("Audio Components")]
         public AudioSource GlobalAudioSource;
 
+        [Header("Audio Data")]
+        public AudioDictionary audioDictionary;
+
         // ===== Unity Lifecycle Events =====
 
         // Awake is called once before the first execution of Start after the MonoBehaviour is created
@@ -19,13 +23,20 @@ namespace _app.Scripts.Managers {
                 Destroy(this);
         }
 
+        void Start() {
+            audioDictionary.clipDictionary.Initialize();
+        }
+
         // ===== Methods =====
 
         public void PlayGlobalAudio(AudioClip audioClip) {
-            if (!!GlobalAudioSource) {
+            if (!!GlobalAudioSource && !!audioClip) {
                 GlobalAudioSource.clip = audioClip;
                 GlobalAudioSource.Play();
             }
         }
+
+        public void PlayRandomAudioFromKey(string audioKey) =>
+            PlayGlobalAudio(audioDictionary.GetRandomClip(audioKey));
     }
 }

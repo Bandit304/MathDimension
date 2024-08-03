@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5f4929431274442a6d2e9595759251, type: 3}
+  m_Name: AudioDictionary
+  m_EditorClassIdentifier: 
+  clipDictionary:
+    _dictionary:
+    - key: Audio_MsInfo_Generic
+      value:
+      - {fileID: 8300000, guid: 294a487176da1cf40bded1b31f6bdcdd, type: 3}
+      - {fileID: 8300000, guid: 4ffd8d07fd0d6a34f932b1f6f109cb49, type: 3}
+      - {fileID: 8300000, guid: b7ccfd47bc4bad14bbfff7bedb87fe90, type: 3}
+      - {fileID: 8300000, guid: 2ad535b08e637e44cbd540b89f440209, type: 3}
+      - {fileID: 8300000, guid: ca63b4e4c1863fc4facb4310a6031b37, type: 3}
+    - key: Audio_MsInfo_Math
+      value:
+      - {fileID: 8300000, guid: 4731ddae0e7952e4b9fb37db079cc7fd, type: 3}
+      - {fileID: 8300000, guid: 5fbbb168c0dbdd34fa6ed71a67ed0cc3, type: 3}
+      - {fileID: 8300000, guid: 5085805554d676049bfa8540bccf8f80, type: 3}
+      - {fileID: 8300000, guid: d2fe4c6aa4188064f961c41cdda23379, type: 3}
+    - key: Audio_MsInfo_Dont1
+      value:
+      - {fileID: 8300000, guid: 341d4070a0cbbff43a2bd401a218897e, type: 3}
+    - key: Audio_MsInfo_Dont2
+      value:
+      - {fileID: 8300000, guid: feece633fd1d76c47a449e3b325dece0, type: 3}
+    - key: Audio_MsInfo_Amogus
+      value:
+      - {fileID: 8300000, guid: 50a7b05091c09bf4b84b307c77b6a689, type: 3}
+    - key: Audio_Al_Confused
+      value:
+      - {fileID: 8300000, guid: 131cdbd6363413f4dbacc5063b81245b, type: 3}
+      - {fileID: 8300000, guid: e4305a1df0d128a4890f1ed11bc63a8c, type: 3}
+      - {fileID: 8300000, guid: 3e35217311d799a4aa6dae1659bf5add, type: 3}
+      - {fileID: 8300000, guid: 3cfaba2c26fae0f48b7af3cdd0fac6f5, type: 3}
+    - key: Audio_Al_Happy
+      value:
+      - {fileID: 8300000, guid: fb37d09f5d327f84a82b01394d14da92, type: 3}
+      - {fileID: 8300000, guid: be3ac26147b5b7c41ba2a24f4749e777, type: 3}
+      - {fileID: 8300000, guid: c9cfdb48eceb69843b80cffa4d14917c, type: 3}
+      - {fileID: 8300000, guid: cf11ab9b9c5265041a170066aee04886, type: 3}
+    - key: Audio_Al_Hello
+      value:
+      - {fileID: 8300000, guid: 9fbf7ef0589739d4b886340c0e3d22fb, type: 3}
+      - {fileID: 8300000, guid: e7aa1c9624435404394988836744d818, type: 3}
+    - key: Audio_Al_Generic
+      value:
+      - {fileID: 8300000, guid: 262d176588171bd47ae75b70cba7f690, type: 3}
+      - {fileID: 8300000, guid: 3526011f7e23e504bbb06307b5f33cab, type: 3}
+      - {fileID: 8300000, guid: 7695776be33ad1c43bc09be1f3c1b1d2, type: 3}
+    - key: Audio_Al_Math
+      value:
+      - {fileID: 8300000, guid: 772e9377f67091c45a41e416117a40f3, type: 3}
+      - {fileID: 8300000, guid: 38d9be77e48aa024fb9a3a5f52be3cbf, type: 3}
+    - key: Audio_Al_Alligator
+      value:
+      - {fileID: 8300000, guid: b10d15b6bd05db64a8ee3a7f4d3f49d6, type: 3}
+    - key: Audio_Al_Amogus
+      value:
+      - {fileID: 8300000, guid: 92f58b7ce64c1db48852070c72c75a16, type: 3}

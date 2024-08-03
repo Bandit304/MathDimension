@@ -554,6 +554,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: dialogueScriptKeys.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
       propertyPath: 'dialogueScripts.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 2c9e80cd70d86f94697d0a43a2a351fe, type: 2}
@@ -569,6 +573,22 @@ PrefabInstance:
       propertyPath: 'dialogueScripts.Array.data[3]'
       value: 
       objectReference: {fileID: 11400000, guid: 3b93ba3228a2c1945a86fa4fe2395745, type: 2}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: 'dialogueScriptKeys.Array.data[0]'
+      value: Dialogue_MsInfo_Tutorial1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: 'dialogueScriptKeys.Array.data[1]'
+      value: Dialogue_MsInfo_Tutorial2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: 'dialogueScriptKeys.Array.data[2]'
+      value: Dialogue_MsInfo_Tutorial3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: 'dialogueScriptKeys.Array.data[3]'
+      value: Dialogue_MsInfo_Tutorial4
+      objectReference: {fileID: 0}
     - target: {fileID: 8720821534395962042, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.61
@@ -1345,6 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlobalAudioSource: {fileID: 556342768}
+  audioDictionary: {fileID: 11400000, guid: f21184546f44e7d479657de70f94cde4, type: 2}
 --- !u!4 &829276567
 Transform:
   m_ObjectHideFlags: 0
