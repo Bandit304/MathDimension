@@ -1,23 +1,24 @@
 using UnityEngine;
 using _app.Scripts.Managers;
 using System;
-using Random = UnityEngine.Random;
 
 namespace _app.Scripts.Dialogue {
     [Serializable]
     public class Dialogue {
+        [Header("Dialogue Display")]
         public string speaker;
         [TextArea]
         public string text;
-        public AudioClip[] audioClips;
+
+        [Header("Dialogue Audio")]
+        public string audioKey;
 
         public void Open() {
             // Display dialogue box
             if (!!DialogueBoxManager.Instance)
                 DialogueBoxManager.Instance.Display(speaker, text);
-            if (!!AudioManager.Instance && audioClips?.Length != 0) {
-                AudioClip randomClip = audioClips[Random.Range(0, audioClips.Length)];
-                AudioManager.Instance.PlayGlobalAudio(randomClip);
+            if (!!AudioManager.Instance && audioKey != "") {
+                AudioManager.Instance.PlayRandomAudioFromKey(audioKey);
             }
         }
 
