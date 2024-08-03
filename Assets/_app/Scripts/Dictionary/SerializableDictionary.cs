@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace _app.Scripts.Dictionary {
@@ -12,6 +14,10 @@ namespace _app.Scripts.Dictionary {
         
         // ===== Methods =====
         public void Initialize() {
+            // Clear dictionary
+            Clear();
+
+            // Add Key/Value Pairs to dictionary
             foreach(SerializableKeyValuePair<TKey, TValue> pair in _dictionary)
                 Add(pair.key, pair.value);
         }

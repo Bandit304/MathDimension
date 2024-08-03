@@ -17,21 +17,30 @@ MonoBehaviour:
     text: 'Hello there! Welcome to the
 
       M A T H   D I M E N S I O N !'
+    audioKey: Audio_MsInfo_Generic
   - speaker: Al
     text: What? Who are you? Why am I here?
+    audioKey: 
   - speaker: Ms. Information
     text: I am your teacher, Ms. Information, and you're here because your math skills
       are severely lacking!
+    audioKey: 
   - speaker: Ms. Information
     text: Learn the operations I teach you and get a good enough grade on the quiz,
       and you can leave!
+    audioKey: 
   - speaker: Al
     text: What if I fail the quiz?
+    audioKey: 
   - speaker: Ms. Information
     text: Don't.
+    audioKey: 
   - speaker: Al
     text: What? Why N-
+    audioKey: 
   - speaker: Ms. Information
     text: DON'T.
+    audioKey: 
   - speaker: Ms. Information
     text: Good luck!
+    audioKey: 
