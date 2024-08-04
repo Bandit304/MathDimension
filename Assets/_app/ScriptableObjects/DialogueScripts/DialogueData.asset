@@ -14,6 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scripts:
     _dictionary:
+    - key: Dialogue_RedAmogus_Test1
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: SussyBaka
+          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: What? How?
+          audioKey: Audio_Al_Amogus
+    - key: Dialogue_RedAmogus_Test2
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: 'Sus? Haha Sussy Baka!
+
+            Imposter Among Us!'
+          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: Please, just stop! I'll give you whatever you want!
+          audioKey: Audio_Al_Amogus
+        - speaker: Red Amogus
+          text: Emergency Meeting!
+          audioKey: Audio_MsInfo_Amogus
+    - key: Dialogue_RedAmogus_Test3
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: '*Red Amogus was ejected.*'
+          audioKey: Audio_MsInfo_Amogus
     - key: Dialogue_MsInfo_Tutorial1
       value:
         dialogues:
@@ -98,32 +127,76 @@ MonoBehaviour:
         - speaker: Ms. Information
           text: Go learn some math already!
           audioKey: Audio_MsInfo_Generic
-    - key: Dialogue_RedAmogus_Test1
+    - key: Dialogue_MsInfo_2_1
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: SussyBaka
-          audioKey: Audio_MsInfo_Amogus
+        - speaker: Ms. Information
+          text: Hello class! Today we'll be learning... SUBTRACTION!
+          audioKey: Audio_MsInfo_Generic
         - speaker: Al
-          text: What? How?
-          audioKey: Audio_Al_Amogus
-    - key: Dialogue_RedAmogus_Test2
+          text: What do you mean "class"? I'm the only-
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: I'm going to subtract your head from your shoulders if you keep talking!
+          audioKey: Audio_MsInfo_Dont1
+    - key: Dialogue_MsInfo_2_2
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: 'Sus? Haha Sussy Baka!
-
-            Imposter Among Us!'
-          audioKey: Audio_MsInfo_Amogus
+        - speaker: Ms. Information
+          text: Pop Quiz! What did you do before you were pulled here?
+          audioKey: Audio_MsInfo_Generic
         - speaker: Al
-          text: Please, just stop! I'll give you whatever you want!
-          audioKey: Audio_Al_Amogus
-        - speaker: Red Amogus
-          text: Emergency Meeting!
-          audioKey: Audio_MsInfo_Amogus
-    - key: Dialogue_RedAmogus_Test3
+          text: Like, my job? Well, I was a fairly respected theoretical physicist.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Really? How did you land a job like that if you don't know M A T
+            H?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: That's where the "theoretical" part comes in!
+          audioKey: Audio_Al_Happy
+    - key: Dialogue_MsInfo_GenericClose
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: '*Red Amogus was ejected.*'
-          audioKey: Audio_MsInfo_Amogus
+        - speaker: Ms. Information
+          text: ...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: 'Today we''ll be learning about a personal favorite: MULTIPLICATION!'
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Oh no why are the numbers so big? I miss Addition. :(
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: It IS addition! Just a lot of it. :)
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: I've been meaning to ask, what's with all the clocks outside?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Ah, I put those out there to keep track of the time!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: The flow of time can get a bit wibbly wobbly in here, after all...
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Have they been helpful?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: No, they're all broken.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_3
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Best get to work, the clock's ticking!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: No it's not?
+          audioKey: Audio_Al_Confused
