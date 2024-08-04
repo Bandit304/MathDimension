@@ -1,6 +1,7 @@
 using System;
 using System.Numerics;
 using _app.Scripts.Operators;
+using _app.Scripts.Operators.CustomOperators;
 using UnityEngine;
 
 namespace _app.Scripts.Managers
