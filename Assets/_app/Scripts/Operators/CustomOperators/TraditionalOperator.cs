@@ -21,23 +21,23 @@ namespace _app.Scripts.Operators.CustomOperators {
 
             // Get operation name & symbol
             switch(typeof(TCalc).ToString()) {
-                case "Add":
+                case "_app.Scripts.Operators.Calculables.Add":
                     name = "Addition";
                     symbol = "+";
                     break;
-                case "Subtract":
+                case "_app.Scripts.Operators.Calculables.Subtract":
                     name = "Subtraction";
                     symbol = "-";
                     break;
-                case "Multiply":
+                case "_app.Scripts.Operators.Calculables.Multiply":
                     name = "Multiplication";
                     symbol = "*";
                     break;
-                case "Divide":
+                case "_app.Scripts.Operators.Calculables.Divide":
                     name = "Division";
                     symbol = "/";
                     break;
-                case "Exponent":
+                case "_app.Scripts.Operators.Calculables.Exponent":
                     name = "Exponents";
                     symbol = "^";
                     break;

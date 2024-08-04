@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Numerics;
 using _app.Scripts.Operators;
+using _app.Scripts.Operators.Calculables;
 using _app.Scripts.Operators.CustomOperators;
 using UnityEngine;
 
@@ -15,6 +17,7 @@ namespace _app.Scripts.Managers
         public OperatorData data;
 
         [Header("Level Info")] 
+        public CustomOperator currentOperator { get; private set; }
         public int currentLevel;
         
         // OperatorManager is a singleton, it stores and utilizes the stored equations when they are needed
@@ -42,46 +45,40 @@ namespace _app.Scripts.Managers
         
         public void GenerateOperator()
         {
-            if (!!data && (data.opsCount < 5))
+            if (!!data)
             {
-                switch (currentLevel)
-                {
-                    // Will generate an operator of varying difficulty based on the level
-                    case 1:
-                        data.operatorArray[data.opsCount] = new SimpleOperator();
-                        break;
-                    case 2:
-                        data.operatorArray[data.opsCount] = new SimpleOperator();
-                        break;
-                    case 3:
-                        data.operatorArray[data.opsCount] = new IntermediateOperator();
-                        break;
-                    case 4:
-                        data.operatorArray[data.opsCount] = new IntermediateOperator();
-                        break;
-                    case 5:
-                        data.operatorArray[data.opsCount] = new ComplexOperator();
-                        break;
-                    default:
-                        data.operatorArray[data.opsCount] = new SimpleOperator();
-                        break;
-                }
+                if (currentLevel == 1)
+                    currentOperator = new TraditionalOperator<Add>();
+                else if (currentLevel == 2)
+                    currentOperator = new TraditionalOperator<Subtract>();
+                else if (currentLevel == 3)
+                    currentOperator = new TraditionalOperator<Multiply>();
+                else if (currentLevel == 4)
+                    currentOperator = new TraditionalOperator<Divide>();
+                else if (currentLevel >= 5 && currentLevel <= 6)
+                    currentOperator = new SimpleOperator();
+                else if (currentLevel >= 7 && currentLevel <= 8)
+                    currentOperator = new IntermediateOperator();
+                else if (currentLevel == 9)
+                    currentOperator = new ComplexOperator();
+
+                data.operatorArray.Add(currentOperator);
                 
                 // In case the randomly selected name is taken already, a new one will be generated until
                 // a new one is found
-                while (Array.IndexOf(data.usedNames, data.operatorArray[data.opsCount].name) > -1)
+                while (data.usedNames.IndexOf(currentOperator.name) > -1)
                 {
-                    data.operatorArray[data.opsCount].SelectNewName();
+                    currentOperator.SelectNewName();
                 }
                 // The same is done for the symbol
-                while (Array.IndexOf(data.usedSymbols, data.operatorArray[data.opsCount].symbol) > -1)
+                while (data.usedSymbols.IndexOf(currentOperator.symbol) > -1)
                 {
-                    data.operatorArray[data.opsCount].SelectNewSymbol();
+                    currentOperator.SelectNewSymbol();
                 }
                 
                 // Add Symbol and Name to respective arrays and increment counters
-                data.usedNames[data.opsCount] = data.operatorArray[data.opsCount].name;
-                data.usedSymbols[data.opsCount] = data.operatorArray[data.opsCount].symbol;
+                data.usedNames.Add(currentOperator.name);
+                data.usedSymbols.Add(currentOperator.symbol);
                 
                 data.opsCount++;
             }
@@ -103,9 +100,9 @@ namespace _app.Scripts.Managers
         // This version of Calculate will default to using the most recently added Operator
         public double Calculate(double x, double y)
         {
-            if (!!data && (data.opsCount > 0))
+            if (currentOperator != null)
             {
-                return data.operatorArray[data.opsCount - 1].RunCalculation(x, y);
+                return currentOperator.RunCalculation(x, y);
             }
             // In case of problems, return 0
             return 0;
@@ -125,9 +122,9 @@ namespace _app.Scripts.Managers
         // Defaults to most recent op
         public string GetName()
         {
-            if (!!data)
+            if (currentOperator != null)
             {
-                return data.operatorArray[data.opsCount - 1].name;
+                return currentOperator.name;
             }
             return " ";
         }
@@ -135,7 +132,7 @@ namespace _app.Scripts.Managers
         // Specifies op
         public string GetName(int opNum)
         {
-            if (!!data && (0 < opNum) && (6 > opNum))
+            if (!!data && (0 < opNum))
             {
                 return data.operatorArray[opNum - 1].name;
             }
@@ -145,9 +142,9 @@ namespace _app.Scripts.Managers
         // Defaults to most recent op
         public string GetSymbol()
         {
-            if (!!data)
+            if (currentOperator != null)
             {
-                return data.operatorArray[data.opsCount - 1].symbol;
+                return currentOperator.symbol;
             }
             return " ";
         }
@@ -155,7 +152,7 @@ namespace _app.Scripts.Managers
         // Specifies op
         public string GetSymbol(int opNum)
         {
-            if (!!data && (0 < opNum) && (6 > opNum))
+            if (!!data && (0 < opNum))
             {
                 return data.operatorArray[opNum - 1].symbol;
             }
@@ -164,10 +161,10 @@ namespace _app.Scripts.Managers
 
         public void InitializeArr()
         {
-            data.operatorArray = new CustomOperator[5];
+            data.operatorArray = new List<CustomOperator>();
             data.opsCount = 0;
-            data.usedNames = new string[5];
-            data.usedSymbols = new string[5];
+            data.usedNames = new List<string>();
+            data.usedSymbols = new List<string>();
         }
         
         // Returns Current Level for use of picking operators
