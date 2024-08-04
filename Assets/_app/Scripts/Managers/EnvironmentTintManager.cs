@@ -46,8 +46,9 @@ namespace _app.Scripts.Managers {
 
         public void AddTint(Color tint) {
             for (int i = 0; i < envMaterials.Length; i++)
-                envMaterials[i].color = tint;
+                envMaterials[i].SetColor("_BaseColor", tint);
         }
 
+        public void RemoveTint() => AddTint(Color.white);
     }
 }
