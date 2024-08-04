@@ -10,8 +10,15 @@ namespace _app.Scripts.Interactables {
 
         [Header("Dialogue Fields")]
         // Dictionary keys of dialogue scripts in DialogueData file
+        public string Name;
         [SerializeField] private string[] dialogueScriptKeys;
         private int scriptIndex;
+
+        // ===== Unity Lifecycle Events =====
+
+        public void Start() {
+            promptMessage = $"[E] Talk:\n{Name}";
+        }
 
         // ===== Interactable Overrides =====
 

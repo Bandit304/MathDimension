@@ -550,6 +550,10 @@ PrefabInstance:
       value: Talker
       objectReference: {fileID: 0}
     - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
+      propertyPath: Name
+      value: Ms. Information
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
       propertyPath: dialogueScripts.Array.size
       value: 4
       objectReference: {fileID: 0}
