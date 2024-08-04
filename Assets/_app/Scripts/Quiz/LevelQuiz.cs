@@ -56,7 +56,15 @@ namespace _app.Scripts.Quiz
             string symbol = OperatorManager.Instance.GetSymbol(opNum);
             string symbolText = " " + symbol + " ";
             num1 = Random.Range(0, 16);
-            num2 = Random.Range(0, 16);
+            // checks if the operator is basic division to prevent /0
+            if (symbol == "/")
+            {
+                num2 = Random.Range(1, 16);
+            }
+            else
+            {
+                num2 = Random.Range(0, 16);
+            }
             solution = OperatorManager.Instance.Calculate(num1, num2, opNum);
             questionPrompt = "Question: " + num1 + symbolText + num2 + " = ?";
             questionText.text = questionPrompt;
@@ -132,7 +140,13 @@ namespace _app.Scripts.Quiz
             switch (level)
             {
                 case 1:
-                    SceneManager.LoadScene (sceneName:"Level1");
+                    SceneManager.LoadScene (sceneName:"Level2");
+                    break;
+                case 2:
+                    SceneManager.LoadScene(sceneName: "Level3");
+                    break;
+                case 3:
+                    SceneManager.LoadScene(sceneName: "Level4");
                     break;
             }
         }

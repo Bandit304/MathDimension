@@ -406,7 +406,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.45, y: 0.52}
-  m_SizeDelta: {x: 7.9, y: 2.9}
+  m_SizeDelta: {x: 9.49, y: 2.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3625675318030400458
 MeshRenderer:
@@ -2620,7 +2620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645773774651824, guid: a7c1ee82735f63c4586dc781f916eb95, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.64
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 4645773774651824, guid: a7c1ee82735f63c4586dc781f916eb95, type: 3}
       propertyPath: m_LocalScale.y

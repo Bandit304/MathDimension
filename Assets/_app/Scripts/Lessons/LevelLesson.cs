@@ -26,7 +26,15 @@ namespace _app.Scripts.Lessons
             for (int i = 0; i < 3; i++)
             {
                 num1 = Random.Range(0, 13);
-                num2 = Random.Range(0, 13);
+                // checks if the operator is basic division to prevent /0
+                if (symbol == "/")
+                {
+                    num2 = Random.Range(1, 13);
+                }
+                else
+                {
+                    num2 = Random.Range(0, 13);
+                }
                 solution = OperatorManager.Instance.Calculate(num1, num2);
                 lesson += ("\n" + num1 + symbolText + num2 + " = " + solution);
                 whiteboardText.text = lesson;
