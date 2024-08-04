@@ -32,16 +32,16 @@ namespace _app.Scripts.Managers {
             
             switch(stage) {
                 case Stages.Traditional:
-                    AddTint(new Color(135, 211, 255));
+                    AddTint(new Color(135f / 255f, 211f / 255f, 255f / 255f));
                     break;
                 case Stages.Simple:
-                    AddTint(new Color(207, 255, 215));
+                    AddTint(new Color(207f / 255f, 255f / 255f, 215f / 255f));
                     break;
                 case Stages.Intermediate:
-                    AddTint(new Color(252, 255, 189));
+                    AddTint(new Color(252f / 255f, 255f / 255f, 189f / 255f));
                     break;
                 case Stages.Complex:
-                    AddTint(new Color(255, 148, 143));
+                    AddTint(new Color(255f / 255f, 148f / 255f, 143f / 255f));
                     break;
                 default:
                     RemoveTint();
