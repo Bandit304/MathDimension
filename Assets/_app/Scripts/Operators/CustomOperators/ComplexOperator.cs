@@ -1,7 +1,8 @@
 using System;
 using Random = UnityEngine.Random;
+using _app.Scripts.Operators.Calculables;
 
-namespace _app.Scripts.Operators
+namespace _app.Scripts.Operators.CustomOperators
 {
     public class ComplexOperator : CustomOperator
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace _app.Scripts.Operators
+namespace _app.Scripts.Operators.Calculables
 {
     public class Divide : BasicCalculable
     {

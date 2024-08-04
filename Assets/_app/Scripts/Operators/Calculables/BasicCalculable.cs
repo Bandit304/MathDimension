@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _app.Scripts.Operators {
+namespace _app.Scripts.Operators.Calculables {
     public class BasicCalculable : ICalculable {
         // ===== Fields =====
 

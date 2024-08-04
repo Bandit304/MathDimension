@@ -1,4 +1,4 @@
-namespace _app.Scripts.Operators
+namespace _app.Scripts.Operators.Calculables
 {
     public class Subtract : BasicCalculable
     {
