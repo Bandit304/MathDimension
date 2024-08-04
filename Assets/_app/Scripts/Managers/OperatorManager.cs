@@ -39,7 +39,7 @@ namespace _app.Scripts.Managers
                 _instance = this;
             }
         }
-
+        
         public void GenerateOperator()
         {
             if (!!data && (data.opsCount < 5))
@@ -82,10 +82,21 @@ namespace _app.Scripts.Managers
                 // Add Symbol and Name to respective arrays and increment counters
                 data.usedNames[data.opsCount] = data.operatorArray[data.opsCount].name;
                 data.usedSymbols[data.opsCount] = data.operatorArray[data.opsCount].symbol;
-                data.nameCount++;
-                data.symbolCount++;
                 
                 data.opsCount++;
+            }
+        }
+        
+        // In case level needs to be restarted, generate a new operator
+        public void NewOperator()
+        {
+            if (!!data)
+            {
+                data.opsCount--;
+                data.usedNames[data.opsCount] = "";
+                data.usedSymbols[data.opsCount] = "";
+                
+                GenerateOperator();
             }
         }
 
@@ -156,9 +167,7 @@ namespace _app.Scripts.Managers
             data.operatorArray = new CustomOperator[5];
             data.opsCount = 0;
             data.usedNames = new string[5];
-            data.nameCount = 0;
             data.usedSymbols = new string[5];
-            data.symbolCount = 0;
         }
         
         // Returns Current Level for use of picking operators
