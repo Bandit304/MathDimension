@@ -2,30 +2,43 @@ using _app.Scripts.Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace _app.Scripts.Quiz
 {
     public class LevelQuiz : MonoBehaviour
     {
-        [SerializeField]private TextMeshProUGUI questionText;
+        [SerializeField] private TextMeshProUGUI questionText;
         [SerializeField] private TMP_InputField answerInput;
+        [SerializeField] private Button submitButton;
         [SerializeField] private Button exitButton;
+        [SerializeField] private Button nextButton;
+        [SerializeField] private Button resetButton;
+        
         private double num1 = 0;
         private double num2 = 0;
         private double solution = 0;
         private string questionPrompt;
         private double response;
         private int opNum;
+        private int correctAnswers;
+        private int incorrectAnswers;
+        private int level;
+        private bool next = false;
         void OnEnable()
         {
             exitButton.gameObject.SetActive(false);
+            resetButton.gameObject.SetActive(false);
+            correctAnswers = 0;
+            incorrectAnswers = 0;
             answerInput.text = "";
+            level = OperatorManager.Instance.GetLevel();
             GenerateQuestion();
         }
 
         private void GenerateQuestion()
         {
-            int level = OperatorManager.Instance.GetLevel();
+            nextButton.gameObject.SetActive(false);
             
             // Generate the operator this question will use, it's weighted in favor of the current level
             // 50/50 chance it will pick the current level or a previous one
@@ -52,16 +65,36 @@ namespace _app.Scripts.Quiz
         {
             string symbol = OperatorManager.Instance.GetSymbol(opNum);
             string symbolText = " " + symbol + " ";
-            response = int.Parse(answerInput.text);
+            response = double.Parse(answerInput.text);
 
             if (solution == response)
             {
-                questionText.text = num1 + symbolText + num2 + " = " + solution + "\nCorrect! You win!";
-                exitButton.gameObject.SetActive(true);
+                submitButton.gameObject.SetActive(false);
+                correctAnswers++;
+                if (correctAnswers < 5)
+                {
+                    questionText.text = num1 + symbolText + num2 + " = " + solution + 
+                                        "\nCorrect! " + (5 - correctAnswers) + " to go!";
+                }
+                else
+                {
+                    questionText.text = num1 + symbolText + num2 + " = " + solution + 
+                                        "\nCorrect! Next Level";
+                    next = true;
+                }
+                nextButton.gameObject.SetActive(true);
             }
             else
             {
-                questionText.text = num1 + symbolText + num2 + " = ?" + "\nIncorrect";
+                incorrectAnswers++;
+                if (incorrectAnswers < 3)
+                {
+                    questionText.text = num1 + symbolText + num2 + " = ?" + "\nIncorrect. " + (3 - incorrectAnswers) + " tries remaining.";
+                }
+                else
+                {
+                    questionText.text = num1 + symbolText + num2 + " = ?" + "\nIncorrect. Reset to try again.";
+                }
             }
         }
 
@@ -75,6 +108,36 @@ namespace _app.Scripts.Quiz
         {
             Cursor.lockState = CursorLockMode.Locked;
             InputManager.Instance.EnablePlayer();
+        }
+
+        public void NextQuestion()
+        {
+            if (next)
+            {
+                ChangeLevel();
+            }
+            else
+            {
+                answerInput.text = "";
+                submitButton.gameObject.SetActive(true);
+                GenerateQuestion();
+            }
+        }
+
+        private void ChangeLevel()
+        {
+            switch (level)
+            {
+                case 1:
+                    SceneManager.LoadScene (sceneName:"Level1");
+                    break;
+            }
+        }
+
+        public void ResetLevel()
+        {
+            OperatorManager.Instance.NewOperator();
+            Exit();
         }
     }
 }

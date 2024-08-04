@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0f2e427de4ba46f41a94350fb61d5e08
+timeCreated: 1501778360
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 97585
+  packageName: Simple Classroom
+  packageVersion: 2.1
+  assetPath: Assets/Classroom/Prefabs/Window_1.prefab
+  uploadId: 540986
