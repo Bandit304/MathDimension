@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 using _app.Scripts.Operators;
+using _app.Scripts.Operators.Calculables;
 using _app.Scripts.Operators.CustomOperators;
 using UnityEngine;
 
@@ -44,30 +45,22 @@ namespace _app.Scripts.Managers
         
         public void GenerateOperator()
         {
-            if (!!data && (data.opsCount < 5))
+            if (!!data)
             {
-                switch (currentLevel)
-                {
-                    // Will generate an operator of varying difficulty based on the level
-                    case 1:
-                        currentOperator = new SimpleOperator();
-                        break;
-                    case 2:
-                        currentOperator = new SimpleOperator();
-                        break;
-                    case 3:
-                        currentOperator = new IntermediateOperator();
-                        break;
-                    case 4:
-                        currentOperator = new IntermediateOperator();
-                        break;
-                    case 5:
-                        currentOperator = new ComplexOperator();
-                        break;
-                    default:
-                        currentOperator = new ComplexOperator();
-                        break;
-                }
+                if (currentLevel == 1)
+                    currentOperator = new TraditionalOperator<Add>();
+                else if (currentLevel == 2)
+                    currentOperator = new TraditionalOperator<Subtract>();
+                else if (currentLevel == 3)
+                    currentOperator = new TraditionalOperator<Multiply>();
+                else if (currentLevel == 4)
+                    currentOperator = new TraditionalOperator<Divide>();
+                else if (currentLevel >= 5 && currentLevel <= 6)
+                    currentOperator = new SimpleOperator();
+                else if (currentLevel >= 7 && currentLevel <= 8)
+                    currentOperator = new IntermediateOperator();
+                else if (currentLevel == 9)
+                    currentOperator = new ComplexOperator();
 
                 data.operatorArray.Add(currentOperator);
                 
