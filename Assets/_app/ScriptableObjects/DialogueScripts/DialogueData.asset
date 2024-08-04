@@ -266,3 +266,50 @@ MonoBehaviour:
         - speaker: Ms. Information
           text: You'd better be careful, or you'll end up like that "cube" you mentioned...
           audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_5_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Hello class! Today we'll be learning about-
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Hey, uh, Ms. Information? I think something's wrong with today's
+            lesson.
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: What do you mean? It looks perfectly fine to me.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_5_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Are you ABSOLUTELY certain there's nothing unusual about this lesson?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: I have no idea what you're talking about. This is a perfectly good
+            math lesson!
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Your concept of math confuses me.
+          audioKey: Audio_Al_Math
+    - key: Dialogue_MsInfo_5_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: I'm pretty sure that operation looks like a face.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Is it a happy face?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: I mean, if you squint, maybe. Why?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: '"If it looks like it''s in a good mood, then it''s good math!"'
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: '- Ms. Information, The Art of Math'
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Isn't math more of a science than an art?
+          audioKey: Audio_Al_Confused
