@@ -27,6 +27,7 @@ namespace _app.Scripts.Quiz
         private bool next = false;
         void OnEnable()
         {
+            submitButton.gameObject.SetActive(true);
             exitButton.gameObject.SetActive(false);
             resetButton.gameObject.SetActive(false);
             correctAnswers = 0;
@@ -94,6 +95,8 @@ namespace _app.Scripts.Quiz
                 else
                 {
                     questionText.text = num1 + symbolText + num2 + " = ?" + "\nIncorrect. Reset to try again.";
+                    submitButton.gameObject.SetActive(false);
+                    resetButton.gameObject.SetActive(true);
                 }
             }
         }
