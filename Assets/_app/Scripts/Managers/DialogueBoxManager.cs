@@ -65,17 +65,12 @@ namespace _app.Scripts.Managers {
                 dialogueUI.enabled = false;
         }
 
-        public DialogueScript[] GetScripts(string[] scriptKeys) {
+        public DialogueScript GetScript(string scriptKey) {
             // If dialogue data does not exist, return
             if (!dialogueData)
                 return null;
-            // Create list of dialogue scripts
-            List<DialogueScript> scripts = new List<DialogueScript>();
-            // Get scripts from scriptKeys
-            foreach (string scriptKey in scriptKeys)
-                scripts.Add(dialogueData.GetScript(scriptKey));
             // Return list of scripts, converted to array
-            return scripts.ToArray();
+            return dialogueData.GetScript(scriptKey);
         }
     }
 }
