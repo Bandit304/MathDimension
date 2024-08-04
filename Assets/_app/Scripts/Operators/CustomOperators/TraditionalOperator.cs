@@ -8,6 +8,10 @@ namespace _app.Scripts.Operators.CustomOperators {
         // ===== Constructors =====
         
         public TraditionalOperator() {
+            // Define x & y
+            x = new Literal();
+            y = new Literal();
+            
             // Generate equation
             BasicCalculable _equation = new TCalc {
                 x = x,
