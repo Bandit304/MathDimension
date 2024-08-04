@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b9a2e0c8122680e40bde81259df823bb
+timeCreated: 1501518523
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 97585
+  packageName: Simple Classroom
+  packageVersion: 2.1
+  assetPath: Assets/Classroom/Materials/ClassroomObj1Mat.mat
+  uploadId: 540986

@@ -23,7 +23,7 @@ namespace _app.Scripts.Operators.CustomOperators
         {
             "Glorbo", "ExSine", "John", "Leppa", "Skrep", "Blorange", "Tlabber", "RKS",
             "Maxim", "Brick", "Leital", "Cromp", "Blorgo", "Prum", "Zlide", "Ribble",
-            "Ulpy", "Freb", "Querp", "Yulb", "Morp", "Belch", "Jaundice"
+            "Ulpy", "Freb", "Querp", "Yulb", "Morp", "Belch", "Juandice"
         };
         // private int symbolCount = 3;
 

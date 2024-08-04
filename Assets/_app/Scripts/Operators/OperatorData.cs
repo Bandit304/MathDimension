@@ -9,8 +9,6 @@ namespace _app.Scripts.Operators
         public CustomOperator[] operatorArray;
         public int opsCount;
         public string[] usedNames;
-        public int nameCount;
         public string[] usedSymbols;
-        public int symbolCount;
     }
 }

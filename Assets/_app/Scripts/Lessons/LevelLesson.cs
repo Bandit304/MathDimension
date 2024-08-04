@@ -15,7 +15,7 @@ namespace _app.Scripts.Lessons
             generateLesson();
         }
         
-        private void generateLesson()
+        public void generateLesson()
         {
             double num1, num2, solution;
             string symbol = OperatorManager.Instance.GetSymbol();

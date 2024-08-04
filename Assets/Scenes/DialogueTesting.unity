@@ -312,10 +312,6 @@ MonoBehaviour:
   - Dialogue_RedAmogus_Test1
   - Dialogue_RedAmogus_Test2
   - Dialogue_RedAmogus_Test3
-  dialogueScripts:
-  - dialogues: []
-  - dialogues: []
-  - dialogues: []
 --- !u!136 &260177504
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -532,11 +528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMin.y
