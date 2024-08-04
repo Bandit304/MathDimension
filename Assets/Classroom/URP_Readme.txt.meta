@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3c0516031ba12244ebc8878cab8acf15
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 97585
+  packageName: Simple Classroom
+  packageVersion: 2.1
+  assetPath: Assets/Classroom/URP_Readme.txt
+  uploadId: 540986

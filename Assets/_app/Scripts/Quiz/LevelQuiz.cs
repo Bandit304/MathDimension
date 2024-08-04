@@ -13,6 +13,7 @@ namespace _app.Scripts.Quiz
         [SerializeField] private Button submitButton;
         [SerializeField] private Button exitButton;
         [SerializeField] private Button nextButton;
+        [SerializeField] private Button resetButton;
         
         private double num1 = 0;
         private double num2 = 0;
@@ -27,6 +28,7 @@ namespace _app.Scripts.Quiz
         void OnEnable()
         {
             exitButton.gameObject.SetActive(false);
+            resetButton.gameObject.SetActive(false);
             correctAnswers = 0;
             incorrectAnswers = 0;
             answerInput.text = "";

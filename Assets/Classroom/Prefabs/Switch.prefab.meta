@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6937894a63763a34d867b06489f3859a
+timeCreated: 1502203318
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 97585
+  packageName: Simple Classroom
+  packageVersion: 2.1
+  assetPath: Assets/Classroom/Prefabs/Switch.prefab
+  uploadId: 540986
