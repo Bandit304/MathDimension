@@ -4,7 +4,7 @@ namespace _app.Scripts.Managers {
     public class EnvironmentTintManager : MonoBehaviour {
         // ===== Fields =====
 
-        public enum Stages { Traditional, Simple, Intermediate, Complex }
+        public enum Stages { None, Traditional, Simple, Intermediate, Complex }
 
         [Header("Singleton Reference")]
         public static EnvironmentTintManager Instance { get; private set; }
@@ -38,6 +38,9 @@ namespace _app.Scripts.Managers {
                     break;
                 case Stages.Complex:
                     AddTint(new Color(255, 148, 143));
+                    break;
+                default:
+                    RemoveTint();
                     break;
             }
         }
