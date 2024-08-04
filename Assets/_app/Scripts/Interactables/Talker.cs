@@ -11,16 +11,7 @@ namespace _app.Scripts.Interactables {
         [Header("Dialogue Fields")]
         // Dictionary keys of dialogue scripts in DialogueData file
         [SerializeField] private string[] dialogueScriptKeys;
-        [HideInInspector] public DialogueScript[] dialogueScripts;
         private int scriptIndex;
-
-        // ===== Unity Lifecycle Events =====
-
-        public void Start() {
-            // Get dialogue scripts from script keys
-            if (!!DialogueBoxManager.Instance && dialogueScriptKeys.Length != 0)
-                dialogueScripts = DialogueBoxManager.Instance.GetScripts(dialogueScriptKeys);
-        }
 
         // ===== Interactable Overrides =====
 
@@ -32,11 +23,23 @@ namespace _app.Scripts.Interactables {
 
         private IEnumerator DisplayDialogue() {
             // If dialogueScripts empty, end coroutine
-            if (dialogueScripts.Length == 0)
+            if (dialogueScriptKeys.Length == 0)
                 yield break;
 
             // Get current script of dialogue
-            DialogueScript dialogueScript = dialogueScripts[scriptIndex];
+            DialogueScript dialogueScript = null;
+
+            // Get next dialogue script from key
+            if (!!DialogueBoxManager.Instance && dialogueScriptKeys.Length != 0)
+                dialogueScript = DialogueBoxManager.Instance.GetScript(dialogueScriptKeys[scriptIndex]);
+                
+            // Increment script index
+            if (scriptIndex < dialogueScriptKeys.Length - 1)
+                scriptIndex++;
+
+            // If no defined dialogue script was found, exit coroutine
+            if (dialogueScript == null)
+                yield break;
 
             // Disable player
             if (!!InputManager.Instance)
@@ -53,10 +56,6 @@ namespace _app.Scripts.Interactables {
                 yield return new WaitUntil(() => InputManager.Instance.GetInteracting());
             // Display next dialogue in script
             } while (dialogueScript.Next());
-            
-            // Move to next script of dialogue, if applicable
-            if (scriptIndex < dialogueScripts.Length - 1)
-                scriptIndex++;
 
             // Enable player
             if (!!InputManager.Instance)

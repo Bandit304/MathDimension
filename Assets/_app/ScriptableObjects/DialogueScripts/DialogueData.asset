@@ -114,16 +114,16 @@ MonoBehaviour:
           text: 'Sus? Haha Sussy Baka!
 
             Imposter Among Us!'
-          audioKey: 
+          audioKey: Audio_MsInfo_Amogus
         - speaker: Al
           text: Please, just stop! I'll give you whatever you want!
-          audioKey: 
+          audioKey: Audio_Al_Amogus
         - speaker: Red Amogus
           text: Emergency Meeting!
-          audioKey: 
+          audioKey: Audio_MsInfo_Amogus
     - key: Dialogue_RedAmogus_Test3
       value:
         dialogues:
         - speaker: Red Amogus
           text: '*Red Amogus was ejected.*'
-          audioKey: 
+          audioKey: Audio_MsInfo_Amogus
