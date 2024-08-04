@@ -13,19 +13,6 @@ namespace _app.Scripts.Operators.CustomOperators
             ICalculable _x = x;
             ICalculable _y = y;
 
-            // 25% to multiply both numbers on the left side of the equation
-            // 25% to multiply both numbers on the right side of the equation
-            // 50% chance to do nothing
-            int randInt = Random.Range(0, 4);
-            switch (randInt) {
-                case 0:
-                    _x = new Multiply(_x, _y);
-                    break;
-                case 1:
-                    _y = new Multiply(_x, _y);
-                    break;
-            }
-
             // Multiply, Add OR Subtract a small literal on both sides of the equation
             _x = GetRandomCalculation<Multiply, Add, Subtract>(
                 _x,
