@@ -6,37 +6,40 @@ namespace _app.Scripts.Operators.CustomOperators
 {
     public class ComplexOperator : CustomOperator
     {
-        private int maxTypes = 1;
+        private int maxLiteralValue = 5;
 
         public ComplexOperator() : base()
         {
+            ICalculable _x = x;
+            ICalculable _y = y;
 
-            int selectOp = Random.Range(0, maxTypes);
-
-            // Select Operation function
-            switch (selectOp)
-            {
-                // Squares both numbers and adds them together
+            // Square one or both sides of the equation
+            int randInt = Random.Range(0, 3);
+            switch(randInt) {
                 case 0:
-                    equation = new Add(new Multiply(x, x), new Multiply(y, y));
+                    _x = new Exponent(_x, new Literal(2));
                     break;
-                // Squares both numbers and subtracts the second from the first
                 case 1:
-                    equation = new Subtract(new Multiply(x, x), new Multiply(y, y));
+                    _y = new Exponent(_y, new Literal(2));
                     break;
-                // Adds both numbers (first squared) and divides result by a random number between 2 and 6
-                case 2:
-                    equation = new Divide(new Add(new Multiply(x, x), y), new Literal(Random.Range(2, 7)));
-                    break;
-                // Adds both numbers (first squared) and divides result by a random number between 2 and 6
-                case 3:
-                    equation = new Divide(new Add(new Multiply(y, y), x), new Literal(Random.Range(2, 7)));
-                    break;
-                // Defaults to the first custom in case of invalid value
                 default:
-                    equation = new Add(new Multiply(x, x), new Multiply(y, y));
+                    _x = new Exponent(_x, new Literal(2));
+                    _y = new Exponent(_y, new Literal(2));
                     break;
             }
+
+            // Add OR Subtract both sides of the equation
+            ICalculable subEquation = GetRandomCalculation<Add, Subtract>(_x, _y);
+
+            // If only one side of the equation was squared, Multiply OR Divide with small Literal
+            if (randInt != 2)
+                subEquation = GetRandomCalculation<Multiply, Divide>(
+                    subEquation,
+                    new Literal(Random.Range(2, maxLiteralValue + 1))
+                );
+            
+            // Set equation equal to subEquation
+            equation = subEquation;
         }
     }
 }
