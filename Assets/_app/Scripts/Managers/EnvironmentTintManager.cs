@@ -10,7 +10,8 @@ namespace _app.Scripts.Managers {
         public static EnvironmentTintManager Instance { get; private set; }
 
         [Header("Environment Materials")]
-        public Material[] envMaterials;
+        public Renderer EnvRenderer;
+        private Material[] envMaterials;
 
         [Header("Game Stage")]
         public Stages stage;
@@ -26,6 +27,7 @@ namespace _app.Scripts.Managers {
         }
 
         public void Start() {
+            envMaterials = EnvRenderer.materials;
             switch(stage) {
                 case Stages.Traditional:
                     AddTint(new Color(135, 211, 255));

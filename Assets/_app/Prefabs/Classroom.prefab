@@ -520,6 +520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1866915238743104384}
+  - component: {fileID: 2401647547258311495}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -542,6 +543,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4306215767379684320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2401647547258311495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8863007840962800391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4634437c0fefcff4db5d83bcc8f785ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  envMaterials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stage: 0
 --- !u!1 &8928798243041898108
 GameObject:
   m_ObjectHideFlags: 0
