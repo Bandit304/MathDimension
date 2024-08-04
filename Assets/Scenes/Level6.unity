@@ -511,6 +511,25 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &440426612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+  m_PrefabInstance: {fileID: 5611613443773461375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &440426616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440426612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85ca71421e1bd749a3b2d9a67dd6d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promptMessage: Secret
 --- !u!1 &711695439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1361,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1588,6 +1611,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7689187928326136686, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 440426616}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
