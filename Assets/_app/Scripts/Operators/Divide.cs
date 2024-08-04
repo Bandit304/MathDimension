@@ -2,18 +2,12 @@ using System;
 
 namespace _app.Scripts.Operators
 {
-    public class Divide : ICalculable
+    public class Divide : BasicCalculable
     {
-        public ICalculable x;
-        public ICalculable y;
+        public Divide() : base() {}
+        public Divide(ICalculable _x, ICalculable _y) : base(_x, _y) {}
 
-        public Divide(ICalculable _x, ICalculable _y)
-        {
-            x = _x;
-            y = _y;
-        }
-
-        public double Calculate()
+        public override double Calculate()
         {
             return x.Calculate() / y.Calculate();
         }

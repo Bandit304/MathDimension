@@ -1,17 +1,11 @@
 namespace _app.Scripts.Operators
 {
-    public class Subtract : ICalculable
+    public class Subtract : BasicCalculable
     {
-        public ICalculable x;
-        public ICalculable y;
+        public Subtract() : base() {}
+        public Subtract(ICalculable _x, ICalculable _y) : base(_x, _y) {}
 
-        public Subtract(ICalculable _x, ICalculable _y)
-        {
-            x = _x;
-            y = _y;
-        }
-
-        public double Calculate()
+        public override double Calculate()
         {
             return x.Calculate() - y.Calculate();
         }
