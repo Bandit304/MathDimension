@@ -148,6 +148,24 @@ namespace _app.Scripts.Quiz
                 case 3:
                     SceneManager.LoadScene(sceneName: "Level4");
                     break;
+                case 4:
+                    SceneManager.LoadScene (sceneName:"Level5");
+                    break;
+                case 5:
+                    SceneManager.LoadScene(sceneName: "Level6");
+                    break;
+                case 6:
+                    SceneManager.LoadScene(sceneName: "Level7");
+                    break;
+                case 7:
+                    SceneManager.LoadScene(sceneName: "Level8");
+                    break;
+                case 8:
+                    SceneManager.LoadScene(sceneName: "Level9");
+                    break;
+                default:
+                    SceneManager.LoadScene(sceneName: "TitleScreen");
+                    break;
             }
         }
 
