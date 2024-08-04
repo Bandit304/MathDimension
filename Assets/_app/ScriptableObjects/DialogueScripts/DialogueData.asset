@@ -200,3 +200,69 @@ MonoBehaviour:
         - speaker: Al
           text: No it's not?
           audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_4_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Can I have your unDIVIDED attention please?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Ugh...
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: You'll have to DIVIDE and conquer to learn this one!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Please, just stop!
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: This lesson will pay DIVIDEnds!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: That one doesn't even sound like a pun!
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_4_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, some of these decimal numbers can get pretty long. How should
+            we do rounding?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Oh, right! Please round your answers to the nearest hundredth place
+            as needed.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: I don't need another incident like what happened to my LAST student.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Wait, you had another student? What happened to them?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Tried to write the answer to 1 / 3 by hand.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: By the time they dropped dead, half the classroom was covered in
+            3s.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_4_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, what happened to that cool cube?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: What cube?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The cube. The one in the corner that changed colors.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: What are you talking about, there was never any cube there.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_4_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: You'd better be careful, or you'll end up like that "cube" you mentioned...
+          audioKey: Audio_MsInfo_Generic
