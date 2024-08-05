@@ -343,7 +343,7 @@ MonoBehaviour:
           audioKey: Audio_MsInfo_Math
         - speaker: Ms. Information
           text: One way this manifests is by changing the color of the classrom to
-            reflect the difficulty of the problem?
+            reflect the difficulty of the problem.
           audioKey: Audio_MsInfo_Math
     - key: Dialogue_MsInfo_6_3
       value:
@@ -359,4 +359,44 @@ MonoBehaviour:
           audioKey: Audio_MsInfo_Generic
         - speaker: Al
           text: I'm almost done, right?
-          audioKey: Audio_MsInfo_Confused
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_6_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Don't leave me hanging!
+          audioKey: Audio_MsInfo_Dont1
+    - key: Dialogue_MsInfo_7_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: So I've seen blue, green, and yellow...
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: How many more room colors are there?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: It's usually not a good idea to aks questions you don't want the
+            answer to.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_7_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, what's your favorite food?
+          audioKey: Audio_Al_Hello
+        - speaker: Ms. Information
+          text: Sandvich.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Really? I thought it would be a math joke or something
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Not everything has to do with math, Al.
+          audioKey: Audio_MsInfo_Math
+    - key: Dialogue_MsInfo_7_3
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Mmmm, Sandvich...
+          audioKey: Audio_MsInfo_Generic

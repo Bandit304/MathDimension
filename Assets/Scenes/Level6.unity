@@ -1004,11 +1004,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7112906647181939478, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1203,7 +1203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952163138476649274, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
       propertyPath: 'dialogueScriptKeys.Array.data[3]'
-      value: Dialogue_MsInfo_GenericClose
+      value: Dialogue_MsInfo_6_4
       objectReference: {fileID: 0}
     - target: {fileID: 8720821534395962042, guid: b931a918c50498e419c2e6c8a16f8883, type: 3}
       propertyPath: m_LocalPosition.x
