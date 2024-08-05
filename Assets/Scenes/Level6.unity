@@ -475,15 +475,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7112906647181939478, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 112.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5611613443773461376}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8043342532274035220, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_Name
@@ -1114,6 +1122,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 440426618}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+--- !u!1 &5611613443773461376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8928798243041898108, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+  m_PrefabInstance: {fileID: 5611613443773461375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

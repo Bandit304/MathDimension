@@ -512,15 +512,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7112906647181939478, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 112.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5611613443773461376}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: generateLesson
       objectReference: {fileID: 0}
     - target: {fileID: 8043342532274035220, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_Name
@@ -1060,6 +1068,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+--- !u!114 &5611613443773461376 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5491283926372529495, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+  m_PrefabInstance: {fileID: 5611613443773461375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b1ca634672fc5488431dd844657501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
