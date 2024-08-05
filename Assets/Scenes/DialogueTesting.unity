@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Talk
+  Name: Red Amogus
   dialogueScriptKeys:
   - Dialogue_RedAmogus_Test1
   - Dialogue_RedAmogus_Test2
