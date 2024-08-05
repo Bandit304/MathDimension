@@ -71,7 +71,7 @@ namespace _app.Scripts.Quiz
             {
                 submitButton.gameObject.SetActive(false);
                 correctAnswers++;
-                if (correctAnswers < 5)
+                if (correctAnswers < 10)
                 {
                     questionText.text = num1 + symbolText + num2 + " = " + solution + 
                                         "\nCorrect! " + (10 - correctAnswers) + " to go!";
