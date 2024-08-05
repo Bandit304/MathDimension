@@ -14,6 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scripts:
     _dictionary:
+    - key: Dialogue_RedAmogus_Test1
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: SussyBaka
+          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: What? How?
+          audioKey: Audio_Al_Amogus
+    - key: Dialogue_RedAmogus_Test2
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: 'Sus? Haha Sussy Baka!
+
+            Imposter Among Us!'
+          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: Please, just stop! I'll give you whatever you want!
+          audioKey: Audio_Al_Amogus
+        - speaker: Red Amogus
+          text: Emergency Meeting!
+          audioKey: Audio_MsInfo_Amogus
+    - key: Dialogue_RedAmogus_Test3
+      value:
+        dialogues:
+        - speaker: Red Amogus
+          text: '*Red Amogus was ejected.*'
+          audioKey: Audio_MsInfo_Amogus
     - key: Dialogue_MsInfo_Tutorial1
       value:
         dialogues:
@@ -98,32 +127,379 @@ MonoBehaviour:
         - speaker: Ms. Information
           text: Go learn some math already!
           audioKey: Audio_MsInfo_Generic
-    - key: Dialogue_RedAmogus_Test1
+    - key: Dialogue_MsInfo_2_1
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: SussyBaka
-          audioKey: Audio_MsInfo_Amogus
+        - speaker: Ms. Information
+          text: Hello class! Today we'll be learning... SUBTRACTION!
+          audioKey: Audio_MsInfo_Generic
         - speaker: Al
-          text: What? How?
-          audioKey: Audio_Al_Amogus
-    - key: Dialogue_RedAmogus_Test2
+          text: What do you mean "class"? I'm the only-
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: I'm going to subtract your head from your shoulders if you keep talking!
+          audioKey: Audio_MsInfo_Dont1
+    - key: Dialogue_MsInfo_2_2
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: 'Sus? Haha Sussy Baka!
+        - speaker: Ms. Information
+          text: Pop Quiz! What did you do before you were pulled here?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Like, my job? Well, I was a fairly respected theoretical physicist.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Really? How did you land a job like that if you don't know M A T
+            H?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: That's where the "theoretical" part comes in!
+          audioKey: Audio_Al_Happy
+    - key: Dialogue_MsInfo_GenericClose
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: ...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: 'Today we''ll be learning about a personal favorite: MULTIPLICATION!'
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Oh no why are the numbers so big? I miss Addition. :(
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: It IS addition! Just a lot of it. :)
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: I've been meaning to ask, what's with all the clocks outside?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Ah, I put those out there to keep track of the time!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: The flow of time can get a bit wibbly wobbly in here, after all...
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Have they been helpful?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: No, they're all broken.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_3_3
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Best get to work, the clock's ticking!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: No it's not?
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_4_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Can I have your unDIVIDED attention please?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Ugh...
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: You'll have to DIVIDE and conquer to learn this one!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Please, just stop!
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: This lesson will pay DIVIDEnds!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: That one doesn't even sound like a pun!
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_4_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, some of these decimal numbers can get pretty long. How should
+            we do rounding?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Oh, right! Please round your answers to the nearest hundredth place
+            as needed.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: I don't need another incident like what happened to my LAST student.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Wait, you had another student? What happened to them?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Tried to write the answer to 1 / 3 by hand.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: By the time they dropped dead, half the classroom was covered in
+            3s.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_4_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, what happened to that cool cube?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: What cube?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The cube. The one in the corner that changed colors.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: What are you talking about, there was never any cube there.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_4_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: You'd better be careful, or you'll end up like that "cube" you mentioned...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_5_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Hello class! Today we'll be learning about-
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Hey, uh, Ms. Information? I think something's wrong with today's
+            lesson.
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: What do you mean? It looks perfectly fine to me.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_5_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Are you ABSOLUTELY certain there's nothing unusual about this lesson?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: I have no idea what you're talking about. This is a perfectly good
+            math lesson!
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Your concept of math confuses me.
+          audioKey: Audio_Al_Math
+    - key: Dialogue_MsInfo_5_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: I'm pretty sure that operation looks like a face.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Is it a happy face?
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: I mean, if you squint, maybe. Why?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: '"If it looks like it''s in a good mood, then it''s good math!"'
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: '- Ms. Information, The Art of Math'
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Isn't math more of a science than an art?
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_6_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, uh, what'cha doing?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Oh, just hanging around. Don't mind me.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: You can learn a lot when you take a new perspective, you know?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: What are you learning from that perspective?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Sometimes it's easier to get into a situation than it is to get out
+            of one.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_6_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, didn't the room used to be blue? Why is it green now?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: The   M A T H   D I M E N S I O N   naturally responds to math lessons
+          audioKey: Audio_MsInfo_Math
+        - speaker: Ms. Information
+          text: One way this manifests is by changing the color of the classrom to
+            reflect the difficulty of the problem.
+          audioKey: Audio_MsInfo_Math
+    - key: Dialogue_MsInfo_6_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: If I've already gotten to green, I must be doing pretty good!
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: I wonder if I'm almost done!
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: :)
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: I'm almost done, right?
+          audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_6_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Don't leave me hanging!
+          audioKey: Audio_MsInfo_Dont1
+    - key: Dialogue_MsInfo_7_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: So I've seen blue, green, and yellow...
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: How many more room colors are there?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: It's usually not a good idea to aks questions you don't want the
+            answer to.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_7_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, what's your favorite food?
+          audioKey: Audio_Al_Hello
+        - speaker: Ms. Information
+          text: Sandvich.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Really? I thought it would be a math joke or something
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Not everything has to do with math, Al.
+          audioKey: Audio_MsInfo_Math
+    - key: Dialogue_MsInfo_7_3
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Mmmm, Sandvich...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_8_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: What? How are you even doing that?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Silly Al, didn't you know?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: Math gives you the power of flight. This is common sense, Al.
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: I meant how did you get out? All of the doors are locked.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Oh, that. It's a long story.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_8_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: ...Are you gonna share it?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Share what?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The story.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: What story?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The story of how you got out-No, nevermind. I should know better.
+          audioKey: Audio_Al_Generic
+    - key: Dialogue_MsInfo_8_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: If math can give super powers, why can't I fly too?
+          audioKey: Audio_Al_Math
+        - speaker: Ms. Information
+          text: Oh, Al. You have to be GOOD at math to unlock those abilities!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: ...You know what? My fault for asking.
+          audioKey: Audio_Al_Generic
+    - key: Dialogue_MsInfo_9_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Well, this is it. My final lesson.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Already? I though I would have to go through a few more, at least.
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: 'I guess time flies when your stuck in the
 
-            Imposter Among Us!'
-          audioKey: Audio_MsInfo_Amogus
-        - speaker: Al
-          text: Please, just stop! I'll give you whatever you want!
-          audioKey: Audio_Al_Amogus
-        - speaker: Red Amogus
-          text: Emergency Meeting!
-          audioKey: Audio_MsInfo_Amogus
-    - key: Dialogue_RedAmogus_Test3
+            M A T H  
+            D I M E N S I O N.'
+          audioKey: Audio_Al_Math
+    - key: Dialogue_MsInfo_9_2
       value:
         dialogues:
-        - speaker: Red Amogus
-          text: '*Red Amogus was ejected.*'
-          audioKey: Audio_MsInfo_Amogus
+        - speaker: Al
+          text: So, if this is the final lesson, what happens next?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Next you take the final exam. If you pass, you'll finally be free
+            from the   M A T H   D I M E N S I O N .
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Cool! Then I'll be sent home, right?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Don't put words in my mouth.
+          audioKey: Audio_MsInfo_Dont2
+    - key: Dialogue_MsInfo_9_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: You know, I've been thinking...
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: I'm stuck here because my math skills suck, right?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: That's the gist of it, yes.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Then are you here because your math skills suck?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: ...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_9_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: ...Just get out.
+          audioKey: Audio_MsInfo_Dont1

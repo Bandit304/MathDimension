@@ -35,7 +35,7 @@ namespace _app.Scripts.Managers {
                     AddTint(new Color(135f / 255f, 211f / 255f, 255f / 255f));
                     break;
                 case Stages.Simple:
-                    AddTint(new Color(207f / 255f, 255f / 255f, 215f / 255f));
+                    AddTint(new Color(145f / 255f, 255f / 255f, 145f / 255f));
                     break;
                 case Stages.Intermediate:
                     AddTint(new Color(252f / 255f, 255f / 255f, 189f / 255f));
