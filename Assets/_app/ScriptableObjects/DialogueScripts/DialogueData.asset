@@ -400,3 +400,51 @@ MonoBehaviour:
         - speaker: Ms. Information
           text: Mmmm, Sandvich...
           audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_8_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: What? How are you even doing that?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Silly Al, didn't you know?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: Math gives you the power of flight. This is common sense, Al.
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: I meant how did you get out? All of the doors are locked.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Oh, that. It's a long story.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_8_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: ...Are you gonna share it?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Share what?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The story.
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: What story?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: The story of how you got out-No, nevermind. I should know better.
+          audioKey: Audio_Al_Generic
+    - key: Dialogue_MsInfo_8_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: If math can give super powers, why can't I fly too?
+          audioKey: Audio_Al_Math
+        - speaker: Ms. Information
+          text: Oh, Al. You have to be GOOD at math to unlock those abilities!
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: ...You know what? My fault for asking.
+          audioKey: Audio_Al_Generic
