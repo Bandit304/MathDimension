@@ -90,9 +90,10 @@ namespace _app.Scripts.Managers
             if (!!data)
             {
                 data.opsCount--;
-                data.operatorArray.Remove(data.operatorArray[data.opsCount]);
-                data.usedNames[data.opsCount] = "";
-                data.usedSymbols[data.opsCount] = "";
+                
+                data.operatorArray.RemoveAt(data.opsCount);
+                data.usedNames.RemoveAt(data.opsCount);
+                data.usedSymbols.RemoveAt(data.opsCount);
                 
                 GenerateOperator();
             }
