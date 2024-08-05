@@ -484,11 +484,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162363928231437276, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 938441756}
+    - target: {fileID: 5162363928231437276, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextQuestion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162363928231437276, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _app.Scripts.Quiz.FinalExam, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5904507800432610940, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -505,6 +517,22 @@ PrefabInstance:
     - target: {fileID: 7112906647181939478, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 112.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 938441756}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377791634411112044, guid: 31141727d65f039439c30b55d6909445, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: _app.Scripts.Quiz.FinalExam, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7514230972460067048, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
