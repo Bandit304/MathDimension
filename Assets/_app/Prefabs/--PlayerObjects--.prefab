@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8123664040865450394}
         m_TargetAssemblyTypeName: _app.Scripts.Quiz.LevelQuiz, Assembly-CSharp
         m_MethodName: NextQuestion
         m_Mode: 1
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8123664040865450394}
         m_TargetAssemblyTypeName: _app.Scripts.Quiz.LevelQuiz, Assembly-CSharp
         m_MethodName: ResetLevel
         m_Mode: 1
