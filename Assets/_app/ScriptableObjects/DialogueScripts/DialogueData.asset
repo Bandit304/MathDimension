@@ -448,3 +448,58 @@ MonoBehaviour:
         - speaker: Al
           text: ...You know what? My fault for asking.
           audioKey: Audio_Al_Generic
+    - key: Dialogue_MsInfo_9_1
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: Well, this is it. My final lesson.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Already? I though I would have to go through a few more, at least.
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: 'I guess time flies when your stuck in the
+
+            M A T H  
+            D I M E N S I O N.'
+          audioKey: Audio_Al_Math
+    - key: Dialogue_MsInfo_9_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: So, if this is the final lesson, what happens next?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Next you take the final exam. If you pass, you'll finally be free
+            from the   M A T H   D I M E N S I O N .
+          audioKey: Audio_MsInfo_Math
+        - speaker: Al
+          text: Cool! Then I'll be sent home, right?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Don't put words in my mouth.
+          audioKey: Audio_MsInfo_Dont2
+    - key: Dialogue_MsInfo_9_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: You know, I've been thinking...
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: I'm stuck here because my math skills suck, right?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: That's the gist of it, yes.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: Then are you here because your math skills suck?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: ...
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_9_4
+      value:
+        dialogues:
+        - speaker: Ms. Information
+          text: ...Just get out.
+          audioKey: Audio_MsInfo_Dont1
