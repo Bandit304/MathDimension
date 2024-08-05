@@ -313,3 +313,50 @@ MonoBehaviour:
         - speaker: Al
           text: Isn't math more of a science than an art?
           audioKey: Audio_Al_Confused
+    - key: Dialogue_MsInfo_6_1
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, uh, what'cha doing?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: Oh, just hanging around. Don't mind me.
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Ms. Information
+          text: You can learn a lot when you take a new perspective, you know?
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: What are you learning from that perspective?
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: Sometimes it's easier to get into a situation than it is to get out
+            of one.
+          audioKey: Audio_MsInfo_Generic
+    - key: Dialogue_MsInfo_6_2
+      value:
+        dialogues:
+        - speaker: Al
+          text: Hey, didn't the room used to be blue? Why is it green now?
+          audioKey: Audio_Al_Confused
+        - speaker: Ms. Information
+          text: The   M A T H   D I M E N S I O N   naturally responds to math lessons
+          audioKey: Audio_MsInfo_Math
+        - speaker: Ms. Information
+          text: One way this manifests is by changing the color of the classrom to
+            reflect the difficulty of the problem?
+          audioKey: Audio_MsInfo_Math
+    - key: Dialogue_MsInfo_6_3
+      value:
+        dialogues:
+        - speaker: Al
+          text: If I've already gotten to green, I must be doing pretty good!
+          audioKey: Audio_Al_Generic
+        - speaker: Al
+          text: I wonder if I'm almost done!
+          audioKey: Audio_Al_Generic
+        - speaker: Ms. Information
+          text: :)
+          audioKey: Audio_MsInfo_Generic
+        - speaker: Al
+          text: I'm almost done, right?
+          audioKey: Audio_MsInfo_Confused
