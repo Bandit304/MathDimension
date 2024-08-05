@@ -1,4 +1,5 @@
 using _app.Scripts.Managers;
+using _app.Scripts.Operators;
 using TMPro;
 using UnityEngine;
 
@@ -11,7 +12,14 @@ namespace _app.Scripts.Lessons
     
         void Start()
         {
+            // If OperatorReset component present in scene, reset operator data
+            if (!!OperatorReset.Instance)
+                OperatorReset.Instance.ResetOperator();
+            
+            // Generate new operator
             OperatorManager.Instance.GenerateOperator();
+
+            // Generate whiteboard lesson
             generateLesson();
         }
         
