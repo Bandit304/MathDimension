@@ -530,6 +530,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 0
   promptMessage: Secret
+--- !u!65 &440426618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440426612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10000003, y: 0.09999999, z: 0.013361797}
+  m_Center: {x: -0.00000047683716, y: 0.049999993, z: 0.0041799354}
 --- !u!1 &711695439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,11 +1025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4474671804661092820, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7112906647181939478, guid: 31141727d65f039439c30b55d6909445, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1695,6 +1716,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 440426616}
+    - targetCorrespondingSourceObject: {fileID: 4247278158796440384, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 440426618}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab0a55d45d8eea4cba2ee029bc2354c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
