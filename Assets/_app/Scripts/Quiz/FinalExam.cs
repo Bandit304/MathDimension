@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace _app.Scripts.Quiz
 {
-    public class LevelQuiz : MonoBehaviour
+    public class FinalExam : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI questionText;
         [SerializeField] private TMP_InputField answerInput;
@@ -41,17 +41,8 @@ namespace _app.Scripts.Quiz
         {
             nextButton.gameObject.SetActive(false);
             
-            // Generate the operator this question will use, it's weighted in favor of the current level
-            // 50/50 chance it will pick the current level or a previous one
-            int oldOrNew = Random.Range(0, 2);
-            if (oldOrNew == 1)
-            {
-                opNum = level;
-            }
-            else
-            {
-                opNum = Random.Range(1, level + 1);
-            }
+            // Picks a random operator that isn't a traditional one
+            opNum = Random.Range(5, 10);
             
             string symbol = OperatorManager.Instance.GetSymbol(opNum);
             string symbolText = " " + symbol + " ";
@@ -78,25 +69,23 @@ namespace _app.Scripts.Quiz
 
             if (solution == response)
             {
-                AudioManager.Instance.PlayRandomAudioFromKey("Audio_Al_Happy");
                 submitButton.gameObject.SetActive(false);
                 correctAnswers++;
                 if (correctAnswers < 5)
                 {
                     questionText.text = num1 + symbolText + num2 + " = " + solution + 
-                                        "\nCorrect! " + (5 - correctAnswers) + " to go!";
+                                        "\nCorrect! " + (10 - correctAnswers) + " to go!";
                 }
                 else
                 {
                     questionText.text = num1 + symbolText + num2 + " = " + solution + 
-                                        "\nCorrect! Next Level";
+                                        "\nCorrect! You've Graduated!";
                     next = true;
                 }
                 nextButton.gameObject.SetActive(true);
             }
             else
             {
-                AudioManager.Instance.PlayRandomAudioFromKey("Audio_Al_Confused");
                 incorrectAnswers++;
                 if (incorrectAnswers < 3)
                 {
@@ -139,44 +128,11 @@ namespace _app.Scripts.Quiz
 
         private void ChangeLevel()
         {
-            switch (level)
-            {
-                case 1:
-                    SceneManager.LoadScene (sceneName:"Level2");
-                    break;
-                case 2:
-                    SceneManager.LoadScene(sceneName: "Level3");
-                    break;
-                case 3:
-                    SceneManager.LoadScene(sceneName: "Level4");
-                    break;
-                case 4:
-                    SceneManager.LoadScene (sceneName:"Level5");
-                    break;
-                case 5:
-                    SceneManager.LoadScene(sceneName: "Level6");
-                    break;
-                case 6:
-                    SceneManager.LoadScene(sceneName: "Level7");
-                    break;
-                case 7:
-                    SceneManager.LoadScene(sceneName: "Level8");
-                    break;
-                case 8:
-                    SceneManager.LoadScene(sceneName: "Level9");
-                    break;
-                case 9:
-                    SceneManager.LoadScene(sceneName: "FinalLevel");
-                    break;
-                default:
-                    SceneManager.LoadScene(sceneName: "TitleScreen");
-                    break;
-            }
+            SceneManager.LoadScene("End Screen");
         }
 
         public void ResetLevel()
         {
-            OperatorManager.Instance.NewOperator();
             Exit();
         }
     }
